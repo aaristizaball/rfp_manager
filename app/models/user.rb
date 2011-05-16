@@ -10,4 +10,10 @@ class User < ActiveRecord::Base
     return auth_user if submitted_passwd == auth_user.password
   end
   
+  def self.from_remember_token(remembered_id, remembered_name)
+    remembered_user = User.find_by_id(remembered_id)
+    return nil if remembered_user.nil?
+    return remembered_user if remembered_user.name = remembered_name
+  end
+  
 end
