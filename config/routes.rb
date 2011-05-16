@@ -1,6 +1,7 @@
 RfpManager::Application.routes.draw do
   resources :projects
 
+  resources :pcomponents
   resources :users
 
   # The priority is based upon order of creation:

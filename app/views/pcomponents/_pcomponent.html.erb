@@ -1,6 +1,7 @@
-<div class="role">
-	<div class="role-title"> <%= pcomponent.component.title %></div>
-	<div class="person-name"> <%unless pcomponent.user.nil?%> <%= pcomponent.user.name %> <%else %> <p></p><%end%> </div>
+<div class="pcomponent">
+	<div class="pcomponent-title"> <%= pcomponent.component.title %></div>
+	<div class="user-name"> <%unless pcomponent.user.nil?%> <%= pcomponent.user.name %> <%else %> <p></p><%end%> </div>
 	<div class="status-title <%= dom_id(pcomponent.status) %>"> <%= pcomponent.status.title %> </div>
 	<div class="time" datetime="<%= pcomponent.updated_at %>"> <%= pcomponent.updated_at.to_formatted_s(:short) %></div>
+    <%if pcomponent.user.nil? %><%= link_to_icon 'edit', edit_pcomponent_path(pcomponent) %><%end%>
 </div>

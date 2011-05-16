@@ -2887,3 +2887,584 @@ Rendered pcomponents/_pcomponent.html.erb (56.4ms)
 Rendered projects/_project.html.erb (71.5ms)
 Rendered projects/show.html.erb within layouts/application (78.9ms)
 Completed 200 OK in 112ms (Views: 80.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2011-05-15 18:26:45 -0500
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1
+  [1m[36mPcomponent Load (0.6ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+Rendered pcomponents/_pcomponent.html.erb (56.8ms)
+Rendered projects/_project.html.erb (72.5ms)
+Rendered projects/show.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 92ms (Views: 82.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-15 18:26:48 -0500
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (19.6ms)[0m  SELECT "users".* FROM "users"
+Rendered users/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 38ms (Views: 13.0ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-05-15 18:26:54 -0500
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (7.9ms)
+Rendered users/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 22ms (Views: 14.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-15 18:29:35 -0500
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+Rendered users/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 39ms (Views: 33.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-15 18:29:39 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mPcomponent Load (21.4ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (37.3ms)
+Rendered projects/_project.html.erb (78.4ms)
+Rendered projects/index.html.erb within layouts/application (81.2ms)
+Completed 200 OK in 91ms (Views: 62.4ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2011-05-15 18:29:43 -0500
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1[0m
+  [1m[35mPcomponent Load (0.6ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (55.0ms)
+Rendered projects/_project.html.erb (70.3ms)
+Rendered projects/show.html.erb within layouts/application (77.9ms)
+Completed 200 OK in 89ms (Views: 79.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-15 18:29:45 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mPcomponent Load (0.6ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (57.5ms)
+Rendered projects/_project.html.erb (97.7ms)
+Rendered projects/index.html.erb within layouts/application (100.6ms)
+Completed 200 OK in 111ms (Views: 102.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-15 18:33:26 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mPcomponent Load (0.7ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (59.8ms)
+Rendered projects/_project.html.erb (100.8ms)
+Rendered projects/index.html.erb within layouts/application (102.2ms)
+Completed   in 112ms
+
+ActionView::Template::Error (undefined method `edit_pcomponent_path' for #<#<Class:0x00000104015888>:0x00000104012778>):
+    3: 	<div class="person-name"> <%unless pcomponent.user.nil?%> <%= pcomponent.user.name %> <%else %> <p></p><%end%> </div>
+    4: 	<div class="status-title <%= dom_id(pcomponent.status) %>"> <%= pcomponent.status.title %> </div>
+    5: 	<div class="time" datetime="<%= pcomponent.updated_at %>"> <%= pcomponent.updated_at.to_formatted_s(:short) %></div>
+    6:     <%= link_to_icon 'edit', edit_pcomponent_path(pcomponent) %>
+    7: </div>
+  app/views/pcomponents/_pcomponent.html.erb:6:in `_app_views_pcomponents__pcomponent_html_erb___1479389765103197931_2183041980_3077981548900001361'
+  app/views/projects/_project.html.erb:3:in `_app_views_projects__project_html_erb__4548015456787952226_2164233820_526673272685200408'
+  app/views/projects/index.html.erb:4:in `_app_views_projects_index_html_erb___3195152074045715642_2181065120_510526798607446154'
+  app/controllers/projects_controller.rb:9:in `index'
+
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-15 18:34:09 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mPcomponent Load (0.7ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (57.0ms)
+Rendered projects/_project.html.erb (76.4ms)
+Rendered projects/index.html.erb within layouts/application (79.1ms)
+Completed 200 OK in 89ms (Views: 80.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-15 18:35:55 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mPcomponent Load (0.6ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (57.5ms)
+Rendered projects/_project.html.erb (78.5ms)
+Rendered projects/index.html.erb within layouts/application (81.3ms)
+Completed 200 OK in 110ms (Views: 83.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-15 18:36:20 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mPcomponent Load (0.6ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (57.0ms)
+Rendered projects/_project.html.erb (77.2ms)
+Rendered projects/index.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 109ms (Views: 100.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2011-05-15 18:36:22 -0500
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.erb (26.8ms)
+Rendered projects/new.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 41ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-15 18:36:29 -0500
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-05-15 18:36:32 -0500
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/show.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 37ms (Views: 29.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-15 18:36:33 -0500
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 18ms (Views: 13.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-05-15 18:36:35 -0500
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (7.7ms)
+Rendered users/edit.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 22ms (Views: 14.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-05-15 18:36:36 -0500
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered users/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-15 18:36:42 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects"
+  [1m[36mPcomponent Load (0.7ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+Rendered pcomponents/_pcomponent.html.erb (55.5ms)
+Rendered projects/_project.html.erb (96.8ms)
+Rendered projects/index.html.erb within layouts/application (99.6ms)
+Completed 200 OK in 110ms (Views: 101.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pcomponents/1/edit" for 127.0.0.1 at 2011-05-15 18:36:45 -0500
+
+ActionController::RoutingError (uninitialized constant PcomponentsController):
+  
+
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/pcomponents/1/edit" for 127.0.0.1 at 2011-05-15 18:42:27 -0500
+  Processing by PcomponentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Completed   in 1ms
+
+NameError (undefined local variable or method `project' for #<PcomponentsController:0x000001040e26d0>):
+  app/controllers/pcomponents_controller.rb:4:in `edit'
+
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/pcomponents/1/edit" for 127.0.0.1 at 2011-05-15 18:43:18 -0500
+  Processing by PcomponentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPcomponent Load (0.3ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE "pcomponents"."id" = 1 LIMIT 1[0m
+Completed   in 11ms
+
+RuntimeError (In order to use respond_with, first you need to declare the formats your controller responds to in the class level):
+  app/controllers/pcomponents_controller.rb:6:in `edit'
+
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.7ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started GET "/pcomponents/1/edit" for 127.0.0.1 at 2011-05-15 18:43:46 -0500
+  Processing by PcomponentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPcomponent Load (0.3ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE "pcomponents"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1
+Rendered pcomponents/_form.html.erb (3.1ms)
+Rendered pcomponents/edit.html.erb within layouts/application (46.6ms)
+Completed   in 61ms
+
+ActionView::Template::Error (undefined method `title' for #<Pcomponent:0x00000101ff4158>):
+    1: <%= semantic_form_for [@pcomponent] do |form| %>
+    2:   <%= form.inputs "Responsable" do %>
+    3:     <%= form.input :title %>
+    4:     <%= form.input :user %>
+    5:     <%= form.input :status, :as => :radio %>
+    6:   <% end %>
+  app/views/pcomponents/_form.html.erb:3:in `block (2 levels) in _app_views_pcomponents__form_html_erb___4545994583558774769_2182940380_2152753874764312583'
+  app/views/pcomponents/_form.html.erb:2:in `block in _app_views_pcomponents__form_html_erb___4545994583558774769_2182940380_2152753874764312583'
+  app/views/pcomponents/_form.html.erb:1:in `_app_views_pcomponents__form_html_erb___4545994583558774769_2182940380_2152753874764312583'
+  app/views/pcomponents/edit.html.erb:4:in `_app_views_pcomponents_edit_html_erb__205314784341061157_2164210660_510526798607446154'
+  app/controllers/pcomponents_controller.rb:8:in `edit'
+
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/pcomponents/1/edit" for 127.0.0.1 at 2011-05-15 18:43:49 -0500
+  Processing by PcomponentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPcomponent Load (0.2ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE "pcomponents"."id" = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1[0m
+Rendered pcomponents/_form.html.erb (3.0ms)
+Rendered pcomponents/edit.html.erb within layouts/application (45.1ms)
+Completed   in 60ms
+
+ActionView::Template::Error (undefined method `title' for #<Pcomponent:0x00000101e92530>):
+    1: <%= semantic_form_for [@pcomponent] do |form| %>
+    2:   <%= form.inputs "Responsable" do %>
+    3:     <%= form.input :title %>
+    4:     <%= form.input :user %>
+    5:     <%= form.input :status, :as => :radio %>
+    6:   <% end %>
+  app/views/pcomponents/_form.html.erb:3:in `block (2 levels) in _app_views_pcomponents__form_html_erb___4545994583558774769_2182159720_2152753874764312583'
+  app/views/pcomponents/_form.html.erb:2:in `block in _app_views_pcomponents__form_html_erb___4545994583558774769_2182159720_2152753874764312583'
+  app/views/pcomponents/_form.html.erb:1:in `_app_views_pcomponents__form_html_erb___4545994583558774769_2182159720_2152753874764312583'
+  app/views/pcomponents/edit.html.erb:4:in `_app_views_pcomponents_edit_html_erb__205314784341061157_2163474740_510526798607446154'
+  app/controllers/pcomponents_controller.rb:8:in `edit'
+
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/pcomponents/1/edit" for 127.0.0.1 at 2011-05-15 18:45:08 -0500
+  Processing by PcomponentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPcomponent Load (0.2ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE "pcomponents"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses"[0m
+Rendered pcomponents/_form.html.erb (52.9ms)
+Rendered pcomponents/edit.html.erb within layouts/application (96.6ms)
+Completed 200 OK in 110ms (Views: 99.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pcomponents/1/edit" for 127.0.0.1 at 2011-05-15 18:45:21 -0500
+  Processing by PcomponentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPcomponent Load (0.2ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE "pcomponents"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered pcomponents/_form.html.erb (16.4ms)
+Rendered pcomponents/edit.html.erb within layouts/application (59.5ms)
+Completed 200 OK in 73ms (Views: 62.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/pcomponents/1" for 127.0.0.1 at 2011-05-15 18:45:25 -0500
+
+AbstractController::ActionNotFound (The action 'update' could not be found for PcomponentsController):
+  
+
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/pcomponents/1/edit" for 127.0.0.1 at 2011-05-15 18:47:28 -0500
+  Processing by PcomponentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPcomponent Load (0.3ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE "pcomponents"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Rendered pcomponents/_form.html.erb (35.0ms)
+Rendered pcomponents/edit.html.erb within layouts/application (58.9ms)
+Completed 200 OK in 72ms (Views: 61.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/pcomponents/1" for 127.0.0.1 at 2011-05-15 18:47:31 -0500
+  Processing by PcomponentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/bXa+TdRWHsqbtI3QDSFVDjCxZPfDnmQbhhVWmGTPY0=", "pcomponent"=>{"user_id"=>"2"}, "commit"=>"Update Pcomponent", "id"=>"1"}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPcomponent Load (0.2ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE "pcomponents"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE "pcomponents" SET "user_id" = 2, "updated_at" = '2011-05-15 23:47:31.081310' WHERE "pcomponents"."id" = 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 54ms
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2011-05-15 18:47:31 -0500
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1
+  [1m[36mPcomponent Load (0.5ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (70.9ms)
+Rendered projects/_project.html.erb (104.9ms)
+Rendered projects/show.html.erb within layouts/application (112.4ms)
+Completed 200 OK in 124ms (Views: 114.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/pcomponents/2/edit" for 127.0.0.1 at 2011-05-15 18:48:44 -0500
+  Processing by PcomponentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPcomponent Load (0.3ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE "pcomponents"."id" = 2 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Rendered pcomponents/_form.html.erb (16.5ms)
+Rendered pcomponents/edit.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 73ms (Views: 43.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/pcomponents/2" for 127.0.0.1 at 2011-05-15 18:48:46 -0500
+  Processing by PcomponentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/bXa+TdRWHsqbtI3QDSFVDjCxZPfDnmQbhhVWmGTPY0=", "pcomponent"=>{"user_id"=>"1"}, "commit"=>"Update Pcomponent", "id"=>"2"}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPcomponent Load (0.2ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE "pcomponents"."id" = 2 LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mUPDATE "pcomponents" SET "user_id" = 1, "updated_at" = '2011-05-15 23:48:46.885516' WHERE "pcomponents"."id" = 2[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/projects/1
+Completed   in 35ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/pcomponents_controller.rb:20:in `block (2 levels) in update'
+  app/controllers/pcomponents_controller.rb:16:in `update'
+
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+
+
+Started POST "/pcomponents/2" for 127.0.0.1 at 2011-05-15 18:49:09 -0500
+  Processing by PcomponentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/bXa+TdRWHsqbtI3QDSFVDjCxZPfDnmQbhhVWmGTPY0=", "pcomponent"=>{"user_id"=>"1"}, "commit"=>"Update Pcomponent", "id"=>"2"}
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPcomponent Load (0.1ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE "pcomponents"."id" = 2 LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/projects/1
+  [1m[35mAREL (0.2ms)[0m  UPDATE "pcomponents" SET "status_id" = 2, "updated_at" = '2011-05-15 23:49:09.321440' WHERE "pcomponents"."id" = 2
+Completed 302 Found in 35ms
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2011-05-15 18:49:09 -0500
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1[0m
+  [1m[35mPcomponent Load (0.4ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 2 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (78.6ms)
+Rendered projects/_project.html.erb (93.4ms)
+Rendered projects/show.html.erb within layouts/application (100.9ms)
+Completed 200 OK in 132ms (Views: 102.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-15 18:49:26 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mPcomponent Load (0.4ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 2 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (91.0ms)
+Rendered projects/_project.html.erb (111.4ms)
+Rendered projects/index.html.erb within layouts/application (114.1ms)
+Completed 200 OK in 125ms (Views: 116.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-15 18:50:03 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mPcomponent Load (0.4ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 2 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (100.2ms)
+Rendered projects/_project.html.erb (120.3ms)
+Rendered projects/index.html.erb within layouts/application (123.1ms)
+Completed 200 OK in 133ms (Views: 124.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2011-05-15 18:50:05 -0500
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.erb (8.0ms)
+Rendered projects/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 22ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2011-05-15 18:50:19 -0500
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.erb (7.7ms)
+Rendered projects/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 21ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-15 18:50:34 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mPcomponent Load (0.5ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 2 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (75.1ms)
+Rendered projects/_project.html.erb (117.2ms)
+Rendered projects/index.html.erb within layouts/application (120.1ms)
+Completed 200 OK in 131ms (Views: 121.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-15 18:51:45 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mPcomponent Load (0.4ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 2 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (74.4ms)
+Rendered projects/_project.html.erb (114.5ms)
+Rendered projects/index.html.erb within layouts/application (117.6ms)
+Completed 200 OK in 128ms (Views: 119.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-15 18:51:55 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mPcomponent Load (0.4ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 2 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (75.4ms)
+Rendered projects/_project.html.erb (95.9ms)
+Rendered projects/index.html.erb within layouts/application (98.7ms)
+Completed 200 OK in 109ms (Views: 100.8ms | ActiveRecord: 1.7ms)

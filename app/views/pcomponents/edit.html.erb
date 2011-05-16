@@ -1,0 +1,6 @@
+<header>
+  <p>Assign person responsable for: <%= @pcomponent.project.title %></p>
+</header>
+<%= render 'form' %>
+
+<%= link_to raw("&larr; Back to Project"), project_path(@pcomponent.project) %>
