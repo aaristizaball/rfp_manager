@@ -20,7 +20,7 @@ class PcomponentsController < ApplicationController
           @pcomponent.status_id = @pcomponent.status_id + 1
           @pcomponent.save
         else
-          render "edit"
+          render :edit
         end
       }
     end

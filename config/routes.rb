@@ -1,14 +1,15 @@
 RfpManager::Application.routes.draw do
   
-  root :to => 'sessions#new' 
+  root :to => 'projects#index' 
   
   resources :sessions, :only => [:new, :create, :destroy]
   resources :projects
   resources :pcomponents
-  resources :users
+  #resources :users, :only => [:new, :create]
 
   match '/signup', :to => "users#new"
   match '/signin', :to => "sessions#new"
+  match '/signout', :to => "sessions#destroy"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
