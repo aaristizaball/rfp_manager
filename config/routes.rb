@@ -1,10 +1,13 @@
 RfpManager::Application.routes.draw do
-  get "session/new"
-
+  
+  root :to => 'sessions#new' 
+  
+  resources :sessions, :only => [:new, :create, :destroy]
   resources :projects
-
   resources :pcomponents
   resources :users
+
+  match '/signup', :to => "users#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

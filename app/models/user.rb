@@ -10,6 +10,4 @@ class User < ActiveRecord::Base
     return auth_user if submitted_passwd == auth_user.password
   end
   
-  
-  
 end
