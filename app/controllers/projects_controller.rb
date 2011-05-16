@@ -4,8 +4,7 @@ class ProjectsController < ApplicationController
   
   respond_to :html, :xml
   def index
-    @projects = Project.all
-
+    @projects = Project.paginate :page => params[:page]
     respond_with @projects
   end
 

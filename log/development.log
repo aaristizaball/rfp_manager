@@ -3468,3 +3468,207 @@ Rendered pcomponents/_pcomponent.html.erb (75.4ms)
 Rendered projects/_project.html.erb (95.9ms)
 Rendered projects/index.html.erb within layouts/application (98.7ms)
 Completed 200 OK in 109ms (Views: 100.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-15 19:08:39 -0500
+
+ActionController::RoutingError (uninitialized constant ProjectController):
+  
+
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-15 19:08:46 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects"[0m
+  [1m[35mPcomponent Load (0.4ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 2 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (91.8ms)
+Rendered projects/_project.html.erb (111.2ms)
+Rendered projects/index.html.erb within layouts/application (113.9ms)
+Completed 200 OK in 124ms (Views: 115.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-16 13:10:41 -0500
+
+SyntaxError (/Users/aaristizaball/Programacion/Rails/rfp_manager/app/controllers/projects_controller.rb:9: syntax error, unexpected tIVAR, expecting keyword_do or '{' or '('
+/Users/aaristizaball/Programacion/Rails/rfp_manager/app/controllers/projects_controller.rb:40: syntax error, unexpected keyword_do_block, expecting keyword_end
+      respond_with(@project) do |format|
+                               ^
+/Users/aaristizaball/Programacion/Rails/rfp_manager/app/controllers/projects_controller.rb:65: syntax error, unexpected keyword_do_block, expecting keyword_end
+      respond_with(@project) do |format|
+                               ^
+/Users/aaristizaball/Programacion/Rails/rfp_manager/app/controllers/projects_controller.rb:74: syntax error, unexpected keyword_end, expecting $end):
+  
+
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.6ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-16 13:11:06 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (15.0ms)[0m  [1mSELECT "projects".* FROM "projects" LIMIT 1 OFFSET 0[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "projects"
+Rendered projects/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 65ms (Views: 22.0ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-16 13:11:25 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects" LIMIT 1 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "projects"
+  [1m[36mPcomponent Load (18.4ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mComponent Load (0.5ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mStatus Load (0.3ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.3ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 2 LIMIT 1
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (82.0ms)
+Rendered projects/_project.html.erb (191.2ms)
+Rendered projects/index.html.erb within layouts/application (198.7ms)
+Completed 200 OK in 211ms (Views: 181.5ms | ActiveRecord: 20.8ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2011-05-16 13:11:30 -0500
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.erb (130.5ms)
+Rendered projects/new.html.erb within layouts/application (134.3ms)
+Completed 200 OK in 145ms (Views: 137.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2011-05-16 13:11:47 -0500
+  Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mK0iUlwOOTpyMaWDLvXP6jilpLQJzAJ6pamp4TV6d0o=", "project"=>{"title"=>"Project 2", "due_date(1i)"=>"2008", "due_date(2i)"=>"3", "due_date(3i)"=>"3"}, "commit"=>"Create Project"}
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "projects" ("title", "due_date", "created_at", "updated_at") VALUES ('Project 2', '2008-03-03', '2011-05-16 18:11:47.336951', '2011-05-16 18:11:47.336951')[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components"
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "pcomponents" ("project_id", "component_id", "user_id", "status_id", "created_at", "updated_at") VALUES (2, 1, NULL, 1, '2011-05-16 18:11:47.388916', '2011-05-16 18:11:47.388916')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "pcomponents" ("project_id", "component_id", "user_id", "status_id", "created_at", "updated_at") VALUES (2, 2, NULL, 1, '2011-05-16 18:11:47.396188', '2011-05-16 18:11:47.396188')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "pcomponents" ("project_id", "component_id", "user_id", "status_id", "created_at", "updated_at") VALUES (2, 3, NULL, 1, '2011-05-16 18:11:47.399452', '2011-05-16 18:11:47.399452')[0m
+Redirected to http://localhost:3000/projects/2
+Completed 302 Found in 83ms
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2011-05-16 13:11:47 -0500
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = 2 LIMIT 1
+  [1m[36mPcomponent Load (0.6ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 2)[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+Rendered pcomponents/_pcomponent.html.erb (57.2ms)
+Rendered projects/_project.html.erb (75.5ms)
+Rendered projects/show.html.erb within layouts/application (83.1ms)
+Completed 200 OK in 117ms (Views: 85.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-16 13:11:49 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35mPcomponent Load (0.4ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 2 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (72.3ms)
+Rendered projects/_project.html.erb (110.0ms)
+Rendered projects/index.html.erb within layouts/application (113.4ms)
+Completed 200 OK in 127ms (Views: 115.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects?page=2" for 127.0.0.1 at 2011-05-16 13:11:51 -0500
+  Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects" LIMIT 1 OFFSET 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "projects"
+  [1m[36mPcomponent Load (0.7ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 2)[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+Rendered pcomponents/_pcomponent.html.erb (57.1ms)
+Rendered projects/_project.html.erb (75.1ms)
+Rendered projects/index.html.erb within layouts/application (78.5ms)
+Completed 200 OK in 109ms (Views: 98.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects?page=1" for 127.0.0.1 at 2011-05-16 13:11:53 -0500
+  Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35mPcomponent Load (0.4ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 2 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (71.3ms)
+Rendered projects/_project.html.erb (108.0ms)
+Rendered projects/index.html.erb within layouts/application (111.5ms)
+Completed 200 OK in 124ms (Views: 113.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects?page=2" for 127.0.0.1 at 2011-05-16 13:12:45 -0500
+  Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mProject Load (0.5ms)[0m  [1mSELECT "projects".* FROM "projects" LIMIT 1 OFFSET 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "projects"
+  [1m[36mPcomponent Load (0.6ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 2)[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+Rendered pcomponents/_pcomponent.html.erb (55.8ms)
+Rendered projects/_project.html.erb (93.9ms)
+Rendered projects/index.html.erb within layouts/application (97.2ms)
+Completed 200 OK in 110ms (Views: 98.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects?page=1" for 127.0.0.1 at 2011-05-16 13:12:47 -0500
+  Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35mPcomponent Load (0.4ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 2 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (89.4ms)
+Rendered projects/_project.html.erb (107.3ms)
+Rendered projects/index.html.erb within layouts/application (110.5ms)
+Completed 200 OK in 123ms (Views: 112.3ms | ActiveRecord: 1.7ms)
