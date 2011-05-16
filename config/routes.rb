@@ -1,4 +1,6 @@
 RfpManager::Application.routes.draw do
+  get "session/new"
+
   resources :projects
 
   resources :pcomponents
