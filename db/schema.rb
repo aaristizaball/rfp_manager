@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110516200606) do
+ActiveRecord::Schema.define(:version => 20110517152925) do
 
   create_table "components", :force => true do |t|
     t.string   "title"
@@ -44,6 +44,15 @@ ActiveRecord::Schema.define(:version => 20110516200606) do
     t.datetime "updated_at"
   end
 
+  create_table "prequirements", :force => true do |t|
+    t.integer  "requeriment_id"
+    t.integer  "project_id"
+    t.integer  "state"
+    t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "projects", :force => true do |t|
     t.string   "title"
     t.date     "due_date"
@@ -55,6 +64,13 @@ ActiveRecord::Schema.define(:version => 20110516200606) do
     t.string   "title"
     t.integer  "component_id"
     t.integer  "impact_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "requirements", :force => true do |t|
+    t.string   "title"
+    t.integer  "component_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

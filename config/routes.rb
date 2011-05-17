@@ -1,5 +1,7 @@
 RfpManager::Application.routes.draw do
   
+  resources :requirements
+
   root :to => 'projects#index' 
   
   resources :sessions, :only => [:new, :create, :destroy]

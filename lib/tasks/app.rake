@@ -29,6 +29,15 @@ namespace :app do
      ].each do |attributes|
        Question.find_or_create_by_title(attributes)
     end
+    
+     [
+       {:title => 'Requerimiento 1', :component_id => 1},
+       {:title => 'Requerimiento 2', :component_id => 1},
+       {:title => 'Requerimiento 3', :component_id => 2},
+       {:title => 'Requerimiento 4', :component_id => 2},
+     ].each do |attributes|
+       Requirement.find_or_create_by_title(attributes)
+    end
   end
 
 end
