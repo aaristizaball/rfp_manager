@@ -1,19 +1,20 @@
 <div class="pcomponent">
 	
 	<div class="pcomponent-title">
-				
-		<% if (signed_in? && current_user == pcomponent.user) %>
-			<%= link_to pcomponent.component.title, "http://google.com" %> 
-		<% elsif %>
-			<%= pcomponent.component.title %>
-		<% end %>
-		
+		<%= pcomponent.component.title %>
 	</div>
 	
+	<div id="requirements">
+		<% if (signed_in? && current_user == pcomponent.user) %>
+			<%= link_to "Requirements", "model_path(@model)" %>
+		<% elsif %>
+			Requirements
+		<% end %>
+	</div>
 	
 	<div class="user-name"> <%unless pcomponent.user.nil?%> <%= pcomponent.user.name %> <%else %> <p></p><%end%> </div>
+	
 	<div class="status-title <%= dom_id(pcomponent.status) %>"> <%= pcomponent.status.title %> </div>
 	<div class="time" datetime="<%= pcomponent.updated_at %>"> <%= pcomponent.updated_at.to_formatted_s(:short) %></div>
-	
     <%if pcomponent.user.nil? %><%= link_to_icon 'edit', edit_pcomponent_path(pcomponent) %><%end%>
 </div>
