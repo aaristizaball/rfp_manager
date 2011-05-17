@@ -46,6 +46,7 @@ class ProjectsController < ApplicationController
               pc.component = c
               pc.save
             end
+            
             questions = Question.all
             questions.each do |q|
               pq = Pquestion.new
@@ -53,6 +54,16 @@ class ProjectsController < ApplicationController
               pq.question = q
               pq.save
             end
+            
+            
+            requirements = Requirement.all
+            requirements.each do |r|
+              pr = Prequirement.new
+              pr.project = @project
+              pr.requirement = r
+              pr.save
+            end
+            
             redirect_to(project_path(@project), :notice => "The project was successfully created")
           else
             render 'new'

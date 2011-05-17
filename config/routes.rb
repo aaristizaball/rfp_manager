@@ -1,5 +1,7 @@
 RfpManager::Application.routes.draw do
   
+  get "requs/index"
+
   resources :requirements
 
   root :to => 'projects#index' 
