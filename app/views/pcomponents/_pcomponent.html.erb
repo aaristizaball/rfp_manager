@@ -2,7 +2,7 @@
 	
 	<div class="pcomponent-title">
 				
-		<% if current_user == pcomponent.user %>
+		<% if sign_in?.nil? && (current_user == pcomponent.user) %>
 			<%= link_to pcomponent.component.title, "http://google.com" %> 
 		<% elsif %>
 			<%= pcomponent.component.title %>
