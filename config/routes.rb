@@ -3,6 +3,8 @@ RfpManager::Application.routes.draw do
   root :to => 'projects#index' 
   
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :questions
+
   resources :projects
   resources :pcomponents
   #resources :users, :only => [:new, :create]

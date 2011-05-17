@@ -20,6 +20,15 @@ namespace :app do
      ].each do |attributes|
        User.find_or_create_by_name(attributes)
     end
+    
+    [
+       {:title => 'Pregunta 1?', :component_id => 1, :impact_id => 1},
+       {:title => 'Pregunta 2?', :component_id => 1, :impact_id => 2},
+       {:title => 'Pregunta 3?', :component_id => 2, :impact_id => 3},
+       {:title => 'Pregunta 4?', :component_id => 2, :impact_id => 2},
+     ].each do |attributes|
+       Question.find_or_create_by_title(attributes)
+    end
   end
 
 end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  component_id: 1
+  impact_id: 1
+
+two:
+  title: MyString
+  component_id: 1
+  impact_id: 1
