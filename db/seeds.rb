@@ -13,6 +13,14 @@
   ].each do |attributes|
     Status.find_or_create_by_title(attributes)
   end
+  
+  [{:title => 'Low', :value => 1},
+  {:title => 'Medium', :value => 2},
+  {:title => 'High', :value => 3}
+  ].each do |attributes|
+    Impact.find_or_create_by_title(attributes)
+  end
+
 
 [
   {:title => 'Financial'},

@@ -3672,3 +3672,886 @@ Rendered pcomponents/_pcomponent.html.erb (89.4ms)
 Rendered projects/_project.html.erb (107.3ms)
 Rendered projects/index.html.erb within layouts/application (110.5ms)
 Completed 200 OK in 123ms (Views: 112.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects?page=2" for 127.0.0.1 at 2011-05-16 13:23:54 -0500
+  Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT "projects".* FROM "projects" LIMIT 1 OFFSET 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "projects"
+  [1m[36mPcomponent Load (0.7ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 2)[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+Rendered pcomponents/_pcomponent.html.erb (59.1ms)
+Rendered projects/_project.html.erb (77.5ms)
+Rendered projects/index.html.erb within layouts/application (80.9ms)
+Completed 200 OK in 94ms (Views: 82.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects?page=1" for 127.0.0.1 at 2011-05-16 13:23:55 -0500
+  Processing by ProjectsController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35mPcomponent Load (0.4ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 2 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (71.7ms)
+Rendered projects/_project.html.erb (89.3ms)
+Rendered projects/index.html.erb within layouts/application (92.4ms)
+Completed 200 OK in 123ms (Views: 94.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-16 14:48:50 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (13.5ms)[0m  [1mSELECT "projects".* FROM "projects" LIMIT 1 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "projects"
+  [1m[36mPcomponent Load (17.6ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mComponent Load (7.0ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mStatus Load (0.4ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.3ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 2 LIMIT 1
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (115.3ms)
+Rendered projects/_project.html.erb (231.2ms)
+Rendered projects/index.html.erb within layouts/application (259.7ms)
+Completed 200 OK in 350ms (Views: 283.0ms | ActiveRecord: 39.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-16 14:49:06 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects" LIMIT 1 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "projects"
+  [1m[36mPcomponent Load (0.4ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 2 LIMIT 1[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+Rendered pcomponents/_pcomponent.html.erb (70.3ms)
+Rendered projects/_project.html.erb (87.1ms)
+Rendered projects/index.html.erb within layouts/application (90.3ms)
+Completed 200 OK in 102ms (Views: 92.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-16 14:49:22 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" LIMIT 1 OFFSET 0
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35mPcomponent Load (0.4ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 2 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (71.1ms)
+Rendered projects/_project.html.erb (88.1ms)
+Rendered projects/index.html.erb within layouts/application (91.2ms)
+Completed 200 OK in 103ms (Views: 93.0ms | ActiveRecord: 1.7ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateStatuses (20110515203935)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "position" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515203935')
+Migrating to CreateComponents (20110515204002)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "components" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204002')
+Migrating to CreateUsers (20110515204104)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204104')
+Migrating to CreateProjects (20110515204131)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "due_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204131')
+Migrating to CreatePcomponents (20110515221614)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "pcomponents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "project_id" integer, "component_id" integer, "user_id" integer, "status_id" integer DEFAULT 1, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515221614')
+Migrating to CreateImpacts (20110516200259)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "impacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "value" integer, "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200259')
+Migrating to CreateQuestions (20110516200423)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "component_id" integer, "impact_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200423')
+Migrating to CreatePquestions (20110516200606)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (2.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateStatuses (20110515203935)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "position" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515203935')
+Migrating to CreateComponents (20110515204002)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "components" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204002')
+Migrating to CreateUsers (20110515204104)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204104')
+Migrating to CreateProjects (20110515204131)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "due_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204131')
+Migrating to CreatePcomponents (20110515221614)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "pcomponents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "project_id" integer, "component_id" integer, "user_id" integer, "status_id" integer DEFAULT 1, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515221614')
+Migrating to CreateImpacts (20110516200259)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "impacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "value" integer, "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200259')
+Migrating to CreateQuestions (20110516200423)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "component_id" integer, "impact_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200423')
+Migrating to CreatePquestions (20110516200606)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "pquestions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "project_id" integer, "rate" float, "comment" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200606')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("components")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("impacts")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("pcomponents")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("pquestions")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("projects")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("questions")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("statuses")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'Unassigned' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('Unassigned', 1, '2011-05-16 20:16:16.853816', '2011-05-16 20:16:16.853816')
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'In process' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('In process', 2, '2011-05-16 20:16:16.860611', '2011-05-16 20:16:16.860611')
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'Overdue' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('Overdue', 3, '2011-05-16 20:16:16.862996', '2011-05-16 20:16:16.862996')
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'Completed' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('Completed', 4, '2011-05-16 20:16:16.865307', '2011-05-16 20:16:16.865307')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mImpact Load (0.1ms)[0m  SELECT "impacts".* FROM "impacts" WHERE "impacts"."title" = 'Low' LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO "impacts" ("title", "value", "description", "created_at", "updated_at") VALUES ('Low', 1, NULL, '2011-05-16 20:16:16.876810', '2011-05-16 20:16:16.876810')[0m
+  [1m[35mImpact Load (0.2ms)[0m  SELECT "impacts".* FROM "impacts" WHERE "impacts"."title" = 'Medium' LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "impacts" ("title", "value", "description", "created_at", "updated_at") VALUES ('Medium', 2, NULL, '2011-05-16 20:16:16.884266', '2011-05-16 20:16:16.884266')[0m
+  [1m[35mImpact Load (0.2ms)[0m  SELECT "impacts".* FROM "impacts" WHERE "impacts"."title" = 'High' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "impacts" ("title", "value", "description", "created_at", "updated_at") VALUES ('High', 3, NULL, '2011-05-16 20:16:16.887480', '2011-05-16 20:16:16.887480')[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."title" = 'Financial' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "components" ("title", "created_at", "updated_at") VALUES ('Financial', '2011-05-16 20:16:16.914307', '2011-05-16 20:16:16.914307')
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."title" = 'Technical' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "components" ("title", "created_at", "updated_at") VALUES ('Technical', '2011-05-16 20:16:16.917924', '2011-05-16 20:16:16.917924')
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."title" = 'Law' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "components" ("title", "created_at", "updated_at") VALUES ('Law', '2011-05-16 20:16:16.920245', '2011-05-16 20:16:16.920245')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'alejandro' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('alejandro', 'alejandro', '2011-05-16 20:16:16.931426', '2011-05-16 20:16:16.931426')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'ernesto' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('ernesto', 'ernesto', '2011-05-16 20:16:16.935319', '2011-05-16 20:16:16.935319')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'manager' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('manager', 'manager', '2011-05-16 20:16:16.937584', '2011-05-16 20:16:16.937584')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'developer' LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('developer', 'developer', '2011-05-16 20:16:16.939694', '2011-05-16 20:16:16.939694')[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateStatuses (20110515203935)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "position" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515203935')
+Migrating to CreateComponents (20110515204002)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "components" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204002')
+Migrating to CreateUsers (20110515204104)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204104')
+Migrating to CreateProjects (20110515204131)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "due_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204131')
+Migrating to CreatePcomponents (20110515221614)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "pcomponents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "project_id" integer, "component_id" integer, "user_id" integer, "status_id" integer DEFAULT 1, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515221614')
+Migrating to CreateImpacts (20110516200259)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "impacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "value" integer, "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200259')
+Migrating to CreateQuestions (20110516200423)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "component_id" integer, "impact_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200423')
+Migrating to CreatePquestions (20110516200606)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "pquestions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "project_id" integer, "rate" float, "comment" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200606')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("components")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("impacts")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("pcomponents")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("pquestions")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("projects")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("questions")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("statuses")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'Unassigned' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('Unassigned', 1, '2011-05-16 20:21:26.258879', '2011-05-16 20:21:26.258879')
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'In process' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('In process', 2, '2011-05-16 20:21:26.265054', '2011-05-16 20:21:26.265054')
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'Overdue' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('Overdue', 3, '2011-05-16 20:21:26.267391', '2011-05-16 20:21:26.267391')
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'Completed' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('Completed', 4, '2011-05-16 20:21:26.269732', '2011-05-16 20:21:26.269732')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mImpact Load (0.1ms)[0m  SELECT "impacts".* FROM "impacts" WHERE "impacts"."title" = 'Low' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "impacts" ("title", "value", "description", "created_at", "updated_at") VALUES ('Low', 1, NULL, '2011-05-16 20:21:26.282724', '2011-05-16 20:21:26.282724')[0m
+  [1m[35mImpact Load (0.2ms)[0m  SELECT "impacts".* FROM "impacts" WHERE "impacts"."title" = 'Medium' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "impacts" ("title", "value", "description", "created_at", "updated_at") VALUES ('Medium', 2, NULL, '2011-05-16 20:21:26.287175', '2011-05-16 20:21:26.287175')[0m
+  [1m[35mImpact Load (0.1ms)[0m  SELECT "impacts".* FROM "impacts" WHERE "impacts"."title" = 'High' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "impacts" ("title", "value", "description", "created_at", "updated_at") VALUES ('High', 3, NULL, '2011-05-16 20:21:26.289639', '2011-05-16 20:21:26.289639')[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."title" = 'Financial' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "components" ("title", "created_at", "updated_at") VALUES ('Financial', '2011-05-16 20:21:26.316916', '2011-05-16 20:21:26.316916')
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."title" = 'Technical' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "components" ("title", "created_at", "updated_at") VALUES ('Technical', '2011-05-16 20:21:26.320902', '2011-05-16 20:21:26.320902')
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."title" = 'Law' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "components" ("title", "created_at", "updated_at") VALUES ('Law', '2011-05-16 20:21:26.323070', '2011-05-16 20:21:26.323070')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'alejandro' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('alejandro', 'alejandro', '2011-05-16 20:21:26.333905', '2011-05-16 20:21:26.333905')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'ernesto' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('ernesto', 'ernesto', '2011-05-16 20:21:26.337675', '2011-05-16 20:21:26.337675')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'manager' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('manager', 'manager', '2011-05-16 20:21:26.339789', '2011-05-16 20:21:26.339789')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'developer' LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('developer', 'developer', '2011-05-16 20:21:26.341889', '2011-05-16 20:21:26.341889')[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateStatuses (20110515203935)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "position" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515203935')
+Migrating to CreateComponents (20110515204002)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "components" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204002')
+Migrating to CreateUsers (20110515204104)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204104')
+Migrating to CreateProjects (20110515204131)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "due_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204131')
+Migrating to CreatePcomponents (20110515221614)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "pcomponents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "project_id" integer, "component_id" integer, "user_id" integer, "status_id" integer DEFAULT 1, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515221614')
+Migrating to CreateImpacts (20110516200259)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "impacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "value" integer, "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200259')
+Migrating to CreateQuestions (20110516200423)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "component_id" integer, "impact_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200423')
+Migrating to CreatePquestions (20110516200606)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "pquestions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "project_id" integer, "rate" float, "comment" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200606')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("components")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("impacts")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("pcomponents")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("pquestions")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("projects")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("questions")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("statuses")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'Unassigned' LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('Unassigned', 1, '2011-05-16 20:23:26.234325', '2011-05-16 20:23:26.234325')
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'In process' LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('In process', 2, '2011-05-16 20:23:26.241392', '2011-05-16 20:23:26.241392')
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'Overdue' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('Overdue', 3, '2011-05-16 20:23:26.244247', '2011-05-16 20:23:26.244247')
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'Completed' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('Completed', 4, '2011-05-16 20:23:26.246593', '2011-05-16 20:23:26.246593')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."title" = 'Financial' LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "components" ("title", "created_at", "updated_at") VALUES ('Financial', '2011-05-16 20:23:26.257011', '2011-05-16 20:23:26.257011')[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."title" = 'Technical' LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "components" ("title", "created_at", "updated_at") VALUES ('Technical', '2011-05-16 20:23:26.261460', '2011-05-16 20:23:26.261460')[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."title" = 'Law' LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "components" ("title", "created_at", "updated_at") VALUES ('Law', '2011-05-16 20:23:26.264680', '2011-05-16 20:23:26.264680')[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."name" = 'alejandro' LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('alejandro', 'alejandro', '2011-05-16 20:23:26.276306', '2011-05-16 20:23:26.276306')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."name" = 'ernesto' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('ernesto', 'ernesto', '2011-05-16 20:23:26.296784', '2011-05-16 20:23:26.296784')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."name" = 'manager' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('manager', 'manager', '2011-05-16 20:23:26.299038', '2011-05-16 20:23:26.299038')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."name" = 'developer' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('developer', 'developer', '2011-05-16 20:23:26.301522', '2011-05-16 20:23:26.301522')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (2.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateStatuses (20110515203935)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "position" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515203935')
+Migrating to CreateComponents (20110515204002)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "components" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204002')
+Migrating to CreateUsers (20110515204104)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204104')
+Migrating to CreateProjects (20110515204131)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "due_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204131')
+Migrating to CreatePcomponents (20110515221614)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "pcomponents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "project_id" integer, "component_id" integer, "user_id" integer, "status_id" integer DEFAULT 1, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515221614')
+Migrating to CreateImpacts (20110516200259)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "impacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "value" integer, "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200259')
+Migrating to CreateQuestions (20110516200423)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "component_id" integer, "impact_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200423')
+Migrating to CreatePquestions (20110516200606)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "pquestions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "project_id" integer, "rate" float, "comment" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200606')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("components")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("impacts")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("pcomponents")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("pquestions")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("projects")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("questions")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("statuses")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'Unassigned' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('Unassigned', 1, '2011-05-16 20:23:41.371164', '2011-05-16 20:23:41.371164')
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'In process' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('In process', 2, '2011-05-16 20:23:41.377819', '2011-05-16 20:23:41.377819')
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'Overdue' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('Overdue', 3, '2011-05-16 20:23:41.380519', '2011-05-16 20:23:41.380519')
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'Completed' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('Completed', 4, '2011-05-16 20:23:41.382801', '2011-05-16 20:23:41.382801')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."title" = 'Financial' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "components" ("title", "created_at", "updated_at") VALUES ('Financial', '2011-05-16 20:23:41.393706', '2011-05-16 20:23:41.393706')[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."title" = 'Technical' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "components" ("title", "created_at", "updated_at") VALUES ('Technical', '2011-05-16 20:23:41.397718', '2011-05-16 20:23:41.397718')[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."title" = 'Law' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "components" ("title", "created_at", "updated_at") VALUES ('Law', '2011-05-16 20:23:41.399885', '2011-05-16 20:23:41.399885')[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."name" = 'alejandro' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('alejandro', 'alejandro', '2011-05-16 20:23:41.412352', '2011-05-16 20:23:41.412352')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."name" = 'ernesto' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('ernesto', 'ernesto', '2011-05-16 20:23:41.435798', '2011-05-16 20:23:41.435798')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."name" = 'manager' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('manager', 'manager', '2011-05-16 20:23:41.438290', '2011-05-16 20:23:41.438290')
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."name" = 'developer' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('developer', 'developer', '2011-05-16 20:23:41.440702', '2011-05-16 20:23:41.440702')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateStatuses (20110515203935)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "position" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515203935')
+Migrating to CreateComponents (20110515204002)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "components" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204002')
+Migrating to CreateUsers (20110515204104)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204104')
+Migrating to CreateProjects (20110515204131)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "due_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515204131')
+Migrating to CreatePcomponents (20110515221614)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "pcomponents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "project_id" integer, "component_id" integer, "user_id" integer, "status_id" integer DEFAULT 1, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110515221614')
+Migrating to CreateImpacts (20110516200259)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "impacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "value" integer, "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200259')
+Migrating to CreateQuestions (20110516200423)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "component_id" integer, "impact_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200423')
+Migrating to CreatePquestions (20110516200606)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "pquestions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "project_id" integer, "rate" float, "comment" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110516200606')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("components")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("impacts")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("pcomponents")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("pquestions")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("projects")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("questions")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("statuses")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'Unassigned' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('Unassigned', 1, '2011-05-16 20:25:33.730801', '2011-05-16 20:25:33.730801')
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'In process' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('In process', 2, '2011-05-16 20:25:33.737577', '2011-05-16 20:25:33.737577')
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'Overdue' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('Overdue', 3, '2011-05-16 20:25:33.739868', '2011-05-16 20:25:33.739868')
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."title" = 'Completed' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "statuses" ("title", "position", "created_at", "updated_at") VALUES ('Completed', 4, '2011-05-16 20:25:33.742151', '2011-05-16 20:25:33.742151')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mImpact Load (0.1ms)[0m  SELECT "impacts".* FROM "impacts" WHERE "impacts"."title" = 'Low' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "impacts" ("title", "value", "description", "created_at", "updated_at") VALUES ('Low', 1, NULL, '2011-05-16 20:25:33.754205', '2011-05-16 20:25:33.754205')[0m
+  [1m[35mImpact Load (0.1ms)[0m  SELECT "impacts".* FROM "impacts" WHERE "impacts"."title" = 'Medium' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "impacts" ("title", "value", "description", "created_at", "updated_at") VALUES ('Medium', 2, NULL, '2011-05-16 20:25:33.758642', '2011-05-16 20:25:33.758642')[0m
+  [1m[35mImpact Load (0.1ms)[0m  SELECT "impacts".* FROM "impacts" WHERE "impacts"."title" = 'High' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "impacts" ("title", "value", "description", "created_at", "updated_at") VALUES ('High', 3, NULL, '2011-05-16 20:25:33.761930', '2011-05-16 20:25:33.761930')[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."title" = 'Financial' LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "components" ("title", "created_at", "updated_at") VALUES ('Financial', '2011-05-16 20:25:33.793878', '2011-05-16 20:25:33.793878')
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."title" = 'Technical' LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "components" ("title", "created_at", "updated_at") VALUES ('Technical', '2011-05-16 20:25:33.800187', '2011-05-16 20:25:33.800187')
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."title" = 'Law' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "components" ("title", "created_at", "updated_at") VALUES ('Law', '2011-05-16 20:25:33.803363', '2011-05-16 20:25:33.803363')
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'alejandro' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('alejandro', 'alejandro', '2011-05-16 20:25:33.814419', '2011-05-16 20:25:33.814419')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'ernesto' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('ernesto', 'ernesto', '2011-05-16 20:25:33.818286', '2011-05-16 20:25:33.818286')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'manager' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('manager', 'manager', '2011-05-16 20:25:33.820797', '2011-05-16 20:25:33.820797')[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'developer' LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "password", "created_at", "updated_at") VALUES ('developer', 'developer', '2011-05-16 20:25:33.823091', '2011-05-16 20:25:33.823091')[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."title" = 'Pregunta 1?' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "questions" ("title", "component_id", "impact_id", "created_at", "updated_at") VALUES ('Pregunta 1?', 1, 1, '2011-05-16 20:25:33.838533', '2011-05-16 20:25:33.838533')
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."title" = 'Pregunta 2?' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "questions" ("title", "component_id", "impact_id", "created_at", "updated_at") VALUES ('Pregunta 2?', 1, 2, '2011-05-16 20:25:33.843483', '2011-05-16 20:25:33.843483')
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."title" = 'Pregunta 3?' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "questions" ("title", "component_id", "impact_id", "created_at", "updated_at") VALUES ('Pregunta 3?', 2, 3, '2011-05-16 20:25:33.846006', '2011-05-16 20:25:33.846006')
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."title" = 'Pregunta 4?' LIMIT 1[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "questions" ("title", "component_id", "impact_id", "created_at", "updated_at") VALUES ('Pregunta 4?', 2, 2, '2011-05-16 20:25:33.848798', '2011-05-16 20:25:33.848798')
+
+
+Started GET "/questions" for 127.0.0.1 at 2011-05-16 15:27:27 -0500
+  Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+Rendered questions/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 40ms (Views: 14.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-16 17:56:35 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.3ms)[0m  SELECT "projects".* FROM "projects" LIMIT 1 OFFSET 0
+Rendered collection (0.0ms)
+Rendered projects/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 13ms (Views: 5.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-05-16 17:56:38 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects" LIMIT 1 OFFSET 0[0m
+Rendered collection (0.0ms)
+Rendered projects/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 34ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2011-05-16 17:56:40 -0500
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.erb (137.1ms)
+Rendered projects/new.html.erb within layouts/application (140.8ms)
+Completed 200 OK in 154ms (Views: 144.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2011-05-16 17:56:58 -0500
+  Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/IvUJcOe8Uhmlj+Hb7GKnIvl3GgIOCqRMiX/JvP9So8=", "project"=>{"title"=>"Project 1", "due_date(1i)"=>"2007", "due_date(2i)"=>"3", "due_date(3i)"=>"9"}, "commit"=>"Create Project"}
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "projects" ("title", "due_date", "created_at", "updated_at") VALUES ('Project 1', '2007-03-09', '2011-05-16 22:56:58.192149', '2011-05-16 22:56:58.192149')
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components"[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "pcomponents" ("project_id", "component_id", "user_id", "status_id", "created_at", "updated_at") VALUES (1, 1, NULL, 1, '2011-05-16 22:56:58.243241', '2011-05-16 22:56:58.243241')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "pcomponents" ("project_id", "component_id", "user_id", "status_id", "created_at", "updated_at") VALUES (1, 2, NULL, 1, '2011-05-16 22:56:58.249806', '2011-05-16 22:56:58.249806')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "pcomponents" ("project_id", "component_id", "user_id", "status_id", "created_at", "updated_at") VALUES (1, 3, NULL, 1, '2011-05-16 22:56:58.252021', '2011-05-16 22:56:58.252021')
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 77ms
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2011-05-16 17:56:58 -0500
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1[0m
+  [1m[35mPcomponent Load (0.6ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (57.7ms)
+Rendered projects/_project.html.erb (72.9ms)
+Rendered projects/show.html.erb within layouts/application (99.5ms)
+Completed 200 OK in 116ms (Views: 101.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-16 17:57:04 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects" LIMIT 1 OFFSET 0[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "projects"
+  [1m[36mPcomponent Load (0.7ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.2ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+Rendered pcomponents/_pcomponent.html.erb (58.2ms)
+Rendered projects/_project.html.erb (96.1ms)
+Rendered projects/index.html.erb within layouts/application (98.9ms)
+Completed 200 OK in 114ms (Views: 100.9ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/projects/1" for 127.0.0.1 at 2011-05-16 17:59:58 -0500
+  Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/IvUJcOe8Uhmlj+Hb7GKnIvl3GgIOCqRMiX/JvP9So8=", "id"=>"1"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1
+  [1m[36mPcomponent Load (20.7ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)[0m
+  [1m[35mAREL (0.2ms)[0m  DELETE FROM "pcomponents" WHERE "pcomponents"."id" = 1
+  [1m[36mAREL (0.0ms)[0m  [1mDELETE FROM "pcomponents" WHERE "pcomponents"."id" = 2[0m
+  [1m[35mAREL (0.0ms)[0m  DELETE FROM "pcomponents" WHERE "pcomponents"."id" = 3
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed   in 64ms
+
+NoMethodError (undefined method `belongs_To' for #<Class:0x00000103ac8d30>):
+  app/models/pquestion.rb:4:in `<class:Pquestion>'
+  app/models/pquestion.rb:1:in `<top (required)>'
+  app/controllers/projects_controller.rb:85:in `destroy'
+
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /Users/aaristizaball/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.9ms)
+
+
+Started POST "/projects/1" for 127.0.0.1 at 2011-05-16 18:00:35 -0500
+  Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/IvUJcOe8Uhmlj+Hb7GKnIvl3GgIOCqRMiX/JvP9So8=", "id"=>"1"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = 1 LIMIT 1
+  [1m[36mPcomponent Load (0.5ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 1)[0m
+  [1m[35mAREL (0.2ms)[0m  DELETE FROM "pcomponents" WHERE "pcomponents"."id" = 1
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "pcomponents" WHERE "pcomponents"."id" = 2[0m
+  [1m[35mAREL (0.0ms)[0m  DELETE FROM "pcomponents" WHERE "pcomponents"."id" = 3
+  [1m[36mPquestion Load (0.1ms)[0m  [1mSELECT "pquestions".* FROM "pquestions" WHERE ("pquestions".project_id = 1)[0m
+  [1m[35mAREL (0.1ms)[0m  DELETE FROM "projects" WHERE "projects"."id" = 1
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 99ms
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-16 18:00:35 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects" LIMIT 1 OFFSET 0[0m
+Rendered collection (0.0ms)
+Rendered projects/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 14ms (Views: 4.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2011-05-16 18:00:36 -0500
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.erb (11.7ms)
+Rendered projects/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 37ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2011-05-16 18:00:48 -0500
+  Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/IvUJcOe8Uhmlj+Hb7GKnIvl3GgIOCqRMiX/JvP9So8=", "project"=>{"title"=>"Project 1", "due_date(1i)"=>"2007", "due_date(2i)"=>"3", "due_date(3i)"=>"8"}, "commit"=>"Create Project"}
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "projects" ("title", "due_date", "created_at", "updated_at") VALUES ('Project 1', '2007-03-08', '2011-05-16 23:00:48.924353', '2011-05-16 23:00:48.924353')
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components"[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "pcomponents" ("project_id", "component_id", "user_id", "status_id", "created_at", "updated_at") VALUES (2, 1, NULL, 1, '2011-05-16 23:00:48.974494', '2011-05-16 23:00:48.974494')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "pcomponents" ("project_id", "component_id", "user_id", "status_id", "created_at", "updated_at") VALUES (2, 2, NULL, 1, '2011-05-16 23:00:48.981516', '2011-05-16 23:00:48.981516')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "pcomponents" ("project_id", "component_id", "user_id", "status_id", "created_at", "updated_at") VALUES (2, 3, NULL, 1, '2011-05-16 23:00:48.983744', '2011-05-16 23:00:48.983744')
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+Redirected to http://localhost:3000/projects/2
+Completed 302 Found in 102ms
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2011-05-16 18:00:49 -0500
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = 2 LIMIT 1
+  [1m[36mPcomponent Load (0.6ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 2)[0m
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1
+  [1m[36mStatus Load (0.1ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+  [1m[35mComponent Load (0.1ms)[0m  SELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1[0m
+Rendered pcomponents/_pcomponent.html.erb (57.5ms)
+Rendered projects/_project.html.erb (72.7ms)
+Rendered projects/show.html.erb within layouts/application (80.3ms)
+Completed 200 OK in 113ms (Views: 82.2ms | ActiveRecord: 2.6ms)
+  [1m[36mPquestion Load (0.4ms)[0m  [1mSELECT "pquestions".* FROM "pquestions"[0m
+
+
+Started POST "/projects/2" for 127.0.0.1 at 2011-05-16 18:01:24 -0500
+  Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/IvUJcOe8Uhmlj+Hb7GKnIvl3GgIOCqRMiX/JvP9So8=", "id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = 2 LIMIT 1
+  [1m[36mPcomponent Load (0.5ms)[0m  [1mSELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 2)[0m
+  [1m[35mAREL (0.2ms)[0m  DELETE FROM "pcomponents" WHERE "pcomponents"."id" = 4
+  [1m[36mAREL (0.1ms)[0m  [1mDELETE FROM "pcomponents" WHERE "pcomponents"."id" = 5[0m
+  [1m[35mAREL (0.0ms)[0m  DELETE FROM "pcomponents" WHERE "pcomponents"."id" = 6
+  [1m[36mPquestion Load (0.1ms)[0m  [1mSELECT "pquestions".* FROM "pquestions" WHERE ("pquestions".project_id = 2)[0m
+  [1m[35mAREL (0.1ms)[0m  DELETE FROM "projects" WHERE "projects"."id" = 2
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 47ms
+
+
+Started GET "/projects" for 127.0.0.1 at 2011-05-16 18:01:24 -0500
+  Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.4ms)[0m  [1mSELECT "projects".* FROM "projects" LIMIT 1 OFFSET 0[0m
+Rendered collection (0.0ms)
+Rendered projects/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 14ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2011-05-16 18:01:28 -0500
+  Processing by ProjectsController#new as HTML
+Rendered projects/_form.html.erb (28.1ms)
+Rendered projects/new.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 45ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2011-05-16 18:01:39 -0500
+  Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/IvUJcOe8Uhmlj+Hb7GKnIvl3GgIOCqRMiX/JvP9So8=", "project"=>{"title"=>"Project 1", "due_date(1i)"=>"2011", "due_date(2i)"=>"6", "due_date(3i)"=>"13"}, "commit"=>"Create Project"}
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "projects" ("title", "due_date", "created_at", "updated_at") VALUES ('Project 1', '2011-06-13', '2011-05-16 23:01:39.764007', '2011-05-16 23:01:39.764007')
+  [1m[36mComponent Load (0.2ms)[0m  [1mSELECT "components".* FROM "components"[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "pcomponents" ("project_id", "component_id", "user_id", "status_id", "created_at", "updated_at") VALUES (3, 1, NULL, 1, '2011-05-16 23:01:39.813741', '2011-05-16 23:01:39.813741')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "pcomponents" ("project_id", "component_id", "user_id", "status_id", "created_at", "updated_at") VALUES (3, 2, NULL, 1, '2011-05-16 23:01:39.820527', '2011-05-16 23:01:39.820527')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "pcomponents" ("project_id", "component_id", "user_id", "status_id", "created_at", "updated_at") VALUES (3, 3, NULL, 1, '2011-05-16 23:01:39.822723', '2011-05-16 23:01:39.822723')
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "pquestions" ("question_id", "project_id", "rate", "comment", "created_at", "updated_at") VALUES (1, 3, NULL, NULL, '2011-05-16 23:01:39.852967', '2011-05-16 23:01:39.852967')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "pquestions" ("question_id", "project_id", "rate", "comment", "created_at", "updated_at") VALUES (2, 3, NULL, NULL, '2011-05-16 23:01:39.879013', '2011-05-16 23:01:39.879013')
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "pquestions" ("question_id", "project_id", "rate", "comment", "created_at", "updated_at") VALUES (3, 3, NULL, NULL, '2011-05-16 23:01:39.881319', '2011-05-16 23:01:39.881319')[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO "pquestions" ("question_id", "project_id", "rate", "comment", "created_at", "updated_at") VALUES (4, 3, NULL, NULL, '2011-05-16 23:01:39.883821', '2011-05-16 23:01:39.883821')
+Redirected to http://localhost:3000/projects/3
+Completed 302 Found in 136ms
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2011-05-16 18:01:39 -0500
+  Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = 3 LIMIT 1[0m
+  [1m[35mPcomponent Load (0.7ms)[0m  SELECT "pcomponents".* FROM "pcomponents" WHERE ("pcomponents".project_id = 3)
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mComponent Load (0.1ms)[0m  [1mSELECT "components".* FROM "components" WHERE "components"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+Rendered pcomponents/_pcomponent.html.erb (38.6ms)
+Rendered projects/_project.html.erb (76.3ms)
+Rendered projects/show.html.erb within layouts/application (83.5ms)
+Completed 200 OK in 97ms (Views: 85.3ms | ActiveRecord: 3.7ms)
+  [1m[35mPquestion Load (1.1ms)[0m  SELECT "pquestions".* FROM "pquestions"
