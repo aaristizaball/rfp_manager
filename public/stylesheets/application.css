@@ -134,7 +134,7 @@ label {
 }
 
 .field .pcomponent a {
-  position: absolute;
+  /* position: absolute; */
   top: 10px;
 }
 .field .pcomponent a.edit {
