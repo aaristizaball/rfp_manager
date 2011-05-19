@@ -1,6 +1,9 @@
 <header>
-  <p>Add comment for question : <%= @pquestion.title %></p>
+  <p>Add comment for question : <%= @pquestion.question.title %></p>
 </header>
 <%= render 'form' %>
 
-<%= link_to raw("&larr; Back to Project"), project_path(@pquestion.project) %>
+<div class="addlink">
+<%= link_to 'Back', pquestions_path(:project_id =>@pquestion.project, :component_id => @pquestion.question.component) %>
+</div>
+

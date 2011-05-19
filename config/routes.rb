@@ -1,15 +1,18 @@
-RfpManager::Application.routes.draw do
+#RfpManager::Application.routes.draw do
+ActionController::Routing::Routes.draw do |map|
   
-  resources :requirements
+  map.resources :requirements
 
-  root :to => 'projects#index' 
+  root :to => 'projects#index'
   
-  resources :sessions, :only => [:new, :create, :destroy]
-  resources :questions
+  map.resources :pquestions, :member => {:rate => :post}
+  
+  map.resources :sessions, :only => [:new, :create, :destroy]
+  map.resources :questions
 
-  resources :projects
-  resources :pcomponents
-  #resources :users, :only => [:new, :create]
+  map.resources :projects
+  map.resources :pcomponents
+  #map.resources :users, :only => [:new, :create]
 
   match '/signup', :to => "users#new"
   match '/signin', :to => "sessions#new"
@@ -27,10 +30,10 @@ RfpManager::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  #   map.resources :products
 
   # Sample resource route with options:
-  #   resources :products do
+  #   map.resources :products do
   #     member do
   #       get 'short'
   #       post 'toggle'
@@ -41,16 +44,16 @@ RfpManager::Application.routes.draw do
   #     end
   #   end
 
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
+  # Sample resource route with sub-map.resources:
+  #   map.resources :products do
+  #     map.resources :comments, :sales
   #     resource :seller
   #   end
 
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
+  # Sample resource route with more complex sub-map.resources
+  #   map.resources :products do
+  #     map.resources :comments
+  #     map.resources :sales do
   #       get 'recent', :on => :collection
   #     end
   #   end
@@ -59,7 +62,7 @@ RfpManager::Application.routes.draw do
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
+  #     map.resources :products
   #   end
 
   # You can have the root of your site routed with "root"

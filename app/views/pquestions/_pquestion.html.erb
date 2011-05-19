@@ -1,0 +1,6 @@
+<div class="pquestion">
+	<div class="pquestion-title">  <%= pquestion.question.title %> </div>
+	<%= link_to_icon('edit', edit_pquestion_path(pquestion)) %>
+	<%= ratings_for pquestion%>
+	<%unless pquestion.comment.nil?%><div class="pquestion-comment">  Comments: <%= pquestion.comment %> </div><%end%>
+</div>

@@ -9,7 +9,7 @@ gem 'sqlite3'
 
 gem 'formtastic'
 gem 'will_paginate', '3.0.pre2'
-
+gem 'ajaxful_rating', '3.0.0.beta2'
 # Use unicorn as the web server
 # gem 'unicorn'
 
