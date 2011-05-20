@@ -3,6 +3,8 @@
     <%= form.input :comment %>
   <% end %>
 
-  <%= form.buttons %>
+  <%= form.buttons do %>
+      <%= form.commit_button "Add Comment" %>
+   <% end %>
 
 <% end %>
