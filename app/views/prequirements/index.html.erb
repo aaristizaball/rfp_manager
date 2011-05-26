@@ -1,0 +1,10 @@
+<h1>Listing requirements</h1>
+
+<div class="field">
+	<%= render @prequirements %>
+    <%= will_paginate @prequirements %>
+
+	<div class"addlink">
+	<%= link_to 'Back', projects_path(:project_id =>  params[:project_id], :page => params[:page_num]) %>
+	</div>
+</div>

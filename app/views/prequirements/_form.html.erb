@@ -1,0 +1,11 @@
+<%= semantic_form_for [@prequirement] do |form| %>
+  <%= form.inputs "" do %>
+    <%= form.input :state, :as => :radio, :collection => [["Yes", 1], ["No", 0]] %>
+    <%= form.input :comment %>
+  <% end %>
+
+  <%= form.buttons do %>
+      <%= form.commit_button "Add Comment" %>
+   <% end %>
+
+<% end %>

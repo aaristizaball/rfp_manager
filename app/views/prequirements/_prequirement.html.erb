@@ -1,0 +1,6 @@
+<div class="prequirement">
+	<div class="prequirement-title">  <%= prequirement.requirement.title %> </div>
+    <div class="prequirement-state">  <% if prequirement.state == 0 %> <div class="prequirement-no"> No </div> <%elsif prequirement.state == 1%> <div class="prequirement-yes"> Yes </div> <%end%>  </div>
+	<%= link_to_icon('edit', edit_prequirement_path(prequirement)) %>
+	<%unless prequirement.comment.nil?%><div class="pquestion-comment">  Comments: <%= prequirement.comment %> </div><%end%>
+</div>
