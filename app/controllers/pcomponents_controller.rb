@@ -25,4 +25,8 @@ class PcomponentsController < ApplicationController
       }
     end
   end
+  
+  def get_scores(pcomponent)
+    Pcomponent.get_questions_score(pcomponent)
+  end
 end

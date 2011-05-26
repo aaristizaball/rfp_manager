@@ -5,16 +5,21 @@
 			<%= link_to pcomponent.component.title, edit_pcomponent_path(pcomponent) %>
 		<%else%>
 			<% if current_user == pcomponent.user%>
-				<%= link_to pcomponent.component.title, pquestions_path(:project_id => pcomponent.project_id, :component_id => pcomponent.component.id, :page_num => params[:page])%>
+				<%= pcomponent.component.title %>
+						<%= link_to_icon('prequirements',  pquestions_path(:project_id => pcomponent.project_id, :component_id => pcomponent.component.id, :page_num => params[:page])) %>
+						<%= link_to_icon('pquestions',  prequirements_path(:project_id => pcomponent.project_id, :component_id => pcomponent.component.id, :page_num => params[:page])) %>
 			<% else %>
 				<%= pcomponent.component.title %>
 			<% end %>
 		<%end%>
-		
 	</div>
 	
 	
 	<div class="user-name"> <%unless pcomponent.user.nil?%> <%= pcomponent.user.name %> <%else %> <p></p><%end%> </div>
 	<div class="status-title <%= dom_id(pcomponent.status) %>"> <%= pcomponent.status.title %> </div>
 	<div class="time" datetime="<%= pcomponent.updated_at %>"> <%= pcomponent.updated_at.to_formatted_s(:short) %></div>
+	<%= ger_scores(params[:type],pcomponent)%>
+	<%= ger_comments(params[:type],pcomponent)%>
 </div>
+
+

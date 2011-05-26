@@ -3,7 +3,8 @@
 <div class="field">
 	<%= render @questions %>
 	<%= will_paginate @questions %>
-<div class"addlink">
-<%= link_to 'Back', projects_path(:project_id =>  params[:project_id], :page => params[:page_num]) %>
-</div>
+
+	<div class"addlink">
+	<%= link_to 'Back', projects_path(:project_id =>  params[:project_id], :page => params[:page_num]) %>
+	</div>
 </div>

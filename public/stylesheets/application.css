@@ -91,6 +91,7 @@ label {
   background-color: #373737;
 }
 
+.field .prequirement,
 .field .pquestion,
 .field .pcomponent {
   position: relative;
@@ -100,6 +101,7 @@ label {
   border-top: 1px solid #666;
 }
 
+.field .prequirement .prequirement-title,
 .field .pquestion .pquestion-title,
 .field .pcomponent .pcomponent-title {
   font-weight: bold;
@@ -135,6 +137,14 @@ label {
   right: 60px;
 }
 
+.field .pcomponent .question-score,
+.field .pcomponent .requirement-score {
+  display: block;
+  padding: 0 0 4px 6px;
+  font-size: 12px;	
+  color:#CCCCCC;
+}
+
 .requirements {
 	position: absolute;
 	  font-size: 12px;
@@ -143,17 +153,44 @@ label {
 	  right: 0px;
 }
 
-.field .pcomponent a {
-  /* position: absolute; */
+
+
+.field .pcomponent a.prequirements {
+  position: absolute; 
   top: 10px;
+  right: 290px;
 }
+
+
+.field .pcomponent a.pquestions {
+  position: absolute; 
+  top: 10px;
+  right: 310px;
+}
+
+
+.field .prequirement a.edit, 
 .field .pcomponent a.edit {
+  position: absolute; 
+  top: 10px;
   right: 30px;
 }
+
+
 .field .pcomponent a.destroy {
+  position: absolute; 
+  top: 10px;
   right: 10px;
 }
 
+
+.prequirement-yes{
+	color:#008000
+}
+
+.prequirement-no{
+	color:#CC0000
+}
 
 
 .pcomponent {

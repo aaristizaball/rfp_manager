@@ -3,6 +3,8 @@ class ProjectsController < ApplicationController
   # GET /projects.xml
   
   respond_to :html, :xml
+  
+  
   def index
     @projects = Project.paginate :page => params[:page]
     respond_with @projects

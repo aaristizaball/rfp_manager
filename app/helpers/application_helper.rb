@@ -4,6 +4,6 @@ module ApplicationHelper
     options.merge!({:class => "icon #{icon_name}"})
     link_to(image_tag("icons/#{icon_name}.png"), url_or_object, options)
   end
-  
+
 
 end

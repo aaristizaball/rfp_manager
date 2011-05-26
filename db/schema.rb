@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(:version => 20110517155557) do
   end
 
   create_table "prequirements", :force => true do |t|
-    t.integer  "requeriment_id"
+    t.integer  "requirement_id"
     t.integer  "project_id"
     t.integer  "state"
     t.string   "comment"

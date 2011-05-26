@@ -1,18 +1,19 @@
 #RfpManager::Application.routes.draw do
 ActionController::Routing::Routes.draw do |map|
   
-  map.resources :requirements
-
   root :to => 'projects#index'
   
-  map.resources :pquestions, :member => {:rate => :post}
-  
   map.resources :sessions, :only => [:new, :create, :destroy]
-  map.resources :questions
+  
 
   map.resources :projects
+  map.resources :users
   map.resources :pcomponents
-  #map.resources :users, :only => [:new, :create]
+  map.resources :questions
+  map.resources :requirements
+  map.resources :prequirements 
+  map.resources :pquestions, :member => {:rate => :post}
+  
 
   match '/signup', :to => "users#new"
   match '/signin', :to => "sessions#new"

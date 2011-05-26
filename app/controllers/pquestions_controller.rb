@@ -6,8 +6,6 @@ class PquestionsController < ApplicationController
     @questions = Pquestion.paginate(:conditions => ["project_id = #{params[:project_id]}"], :page => params[:page],
     :joins => " inner join questions on pquestions.question_id = questions.id  and questions.component_id = #{params[:component_id]}")
     
-    
-    
     respond_with @questions
   end
    

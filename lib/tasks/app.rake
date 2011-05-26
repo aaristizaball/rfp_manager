@@ -8,7 +8,7 @@ namespace :app do
 
 
   desc "restart DB"
-  task :reset => ["db:drop", "db:create", "db:migrate", "db:seed", "app:populate"]
+  task :reset => [:ensure_development_environment, "db:drop", "db:create", "db:migrate", "db:seed", "app:populate"]
 
   desc "Populate de database with development data"
   task :populate => :environment do
