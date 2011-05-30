@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   root :to => 'projects#index'
   
   map.resources :sessions, :only => [:new, :create, :destroy]
+  map.resources :businesses, :only => [:index]
   
 
   map.resources :projects
