@@ -4,8 +4,7 @@ class PrequirementsController < ApplicationController
    
   def index
     @prequirements = Prequirement.paginate(:conditions => ["project_id = #{params[:project_id]}"], :page => params[:page],
-    :joins => " inner join requirements on prequirements.requirement_id = requirements.id  and requirements.component_id = #{params[:component_id]}")
-    
+    :joins => " inner join requirements on prequirements.requirement_id = requirements.id  and requirements.component_id = #{params[:component_id]}")    
     
     respond_with @prequirements
   end

@@ -21,11 +21,20 @@ namespace :app do
        User.find_or_create_by_name(attributes)
     end
     
+     [
+       {:title => 'Sugestion 1', :component_id => 1},
+       {:title => 'Sugestion 2', :component_id => 1},
+       {:title => 'Sugestion 3', :component_id => 2},
+       {:title => 'Sugestion 4', :component_id => 2},
+     ].each do |attributes|
+       Sugestion.find_or_create_by_title(attributes)
+    end
+    
     [
-       {:title => 'Pregunta 1?', :component_id => 1, :impact_id => 1},
-       {:title => 'Pregunta 2?', :component_id => 1, :impact_id => 2},
-       {:title => 'Pregunta 3?', :component_id => 2, :impact_id => 3},
-       {:title => 'Pregunta 4?', :component_id => 2, :impact_id => 2},
+       {:title => 'Pregunta 1?', :component_id => 1, :impact_id => 1, :sugestion_id => 1},
+       {:title => 'Pregunta 2?', :component_id => 1, :impact_id => 2, :sugestion_id => 2},
+       {:title => 'Pregunta 3?', :component_id => 2, :impact_id => 3, :sugestion_id => 3},
+       {:title => 'Pregunta 4?', :component_id => 2, :impact_id => 2, :sugestion_id => 4},
      ].each do |attributes|
        Question.find_or_create_by_title(attributes)
     end
@@ -38,6 +47,9 @@ namespace :app do
      ].each do |attributes|
        Requirement.find_or_create_by_title(attributes)
     end
+    
+    
+    
   end
 
 end

@@ -4,6 +4,7 @@ class CreateQuestions < ActiveRecord::Migration
       t.string :title
       t.integer :component_id
       t.integer :impact_id
+      t.integer :sugestion_id
 
       t.timestamps
     end

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @sugestion.title %>
+</p>
+
+<p>
+  <b>Component:</b>
+  <%= @sugestion.component_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_sugestion_path(@sugestion) %> |
+<%= link_to 'Back', sugestions_path %>

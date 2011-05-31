@@ -8,5 +8,9 @@ class Pquestion < ActiveRecord::Base
   cattr_reader :per_page
   @@per_page = 2
   
+  def metodo
+    true
+  end
+  
 
 end

@@ -1,4 +1,3 @@
-#RfpManager::Application.routes.draw do
 ActionController::Routing::Routes.draw do |map|
   
   root :to => 'projects#index'
@@ -6,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :sessions, :only => [:new, :create, :destroy]
   map.resources :businesses, :only => [:index]
   
-
+  map.resources :sugestions
   map.resources :projects
   map.resources :users
   map.resources :components

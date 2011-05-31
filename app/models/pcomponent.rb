@@ -40,6 +40,7 @@ class Pcomponent < ActiveRecord::Base
      else
        score = total/cont
      end
+     return score
   end
   
   def get_questions_comments
@@ -49,7 +50,7 @@ class Pcomponent < ActiveRecord::Base
         comments << q.comment
       end
     end
-    comments
+    return comments
   end
   
    def get_requirements_comments
@@ -59,7 +60,21 @@ class Pcomponent < ActiveRecord::Base
         comments << r.comment
       end
     end
-    comments
+    return comments
+  end
+  
+  def get_sugestions
+    sugestions = Array.new
+    self.project.pquestions.joins(:question).where(:questions =>{:component_id => self.component_id}).each do |q|
+       qrate = 0.0
+       q.rates.each do |r|
+         qrate += r.stars
+       end
+       if q.question.sugestion != nil && qrate < 3
+          sugestions << q.question.sugestion
+       end
+    end
+    return sugestions
   end
   
 end
