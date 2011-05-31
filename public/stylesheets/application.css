@@ -217,3 +217,14 @@ p.addlink {
 #alert {
   color: red;
 }
+
+div.menu{
+  position: absolute;
+  left: 60px;
+  top: 40px;
+}
+
+div.menu .menu-item{
+  background-color:  #09c; 
+  color:#FFFFFF; 
+}
