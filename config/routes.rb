@@ -9,6 +9,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :projects
   map.resources :users
+  map.resources :components
   map.resources :pcomponents
   map.resources :questions
   map.resources :requirements

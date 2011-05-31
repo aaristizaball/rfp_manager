@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :component_id %><br />
-    <%= f.text_field :component_id %>
+	<%= f.collection_select :component_id, Component.all, :id, :humanize %>
   </div>
   <div class="field">
     <%= f.label :impact_id %><br />
-    <%= f.text_field :impact_id %>
+    <%= f.collection_select :impact_id, Impact.all, :id, :humanize %>
   </div>
   <div class="actions">
     <%= f.submit %>

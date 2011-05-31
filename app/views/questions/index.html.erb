@@ -7,15 +7,13 @@
     <th>Impact</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @questions.each do |question| %>
   <tr>
     <td><%= question.title %></td>
-    <td><%= question.component_id %></td>
-    <td><%= question.impact_id %></td>
-    <td><%= link_to 'Show', question %></td>
+    <td><%= question.component.humanize %></td>
+    <td><%= question.impact.humanize %></td>
     <td><%= link_to 'Edit', edit_question_path(question) %></td>
     <td><%= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
