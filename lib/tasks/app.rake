@@ -13,7 +13,7 @@ namespace :app do
   desc "Populate de database with development data"
   task :populate => :environment do
     [
-       {:name => 'alejandro', :password => 'alejandro'},
+       {:name => 'alejandro', :password => 'alejandro', :email =>  'aaristizaball@gmail.com'},
        {:name => 'ernesto', :password => 'ernesto'},
        {:name => 'manager', :password => 'manager'},
        {:name => 'developer', :password => 'developer'}

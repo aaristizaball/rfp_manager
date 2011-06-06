@@ -35,7 +35,9 @@ ActiveRecord::Schema.define(:version => 20110531201640) do
     t.integer  "project_id"
     t.integer  "component_id"
     t.integer  "user_id"
-    t.integer  "status_id",    :default => 1
+    t.integer  "status_id",      :default => 1
+    t.boolean  "reminded",       :default => false
+    t.boolean  "chief_reminded", :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -112,6 +114,7 @@ ActiveRecord::Schema.define(:version => 20110531201640) do
     t.string   "name"
     t.string   "password"
     t.boolean  "admin"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

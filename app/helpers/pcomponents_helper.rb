@@ -62,5 +62,25 @@ module PcomponentsHelper
          end
      end
    end
+   
+   def check_dates(pcomponent)
+     if Date.today > pcomponent.project.due_date
+       if pcomponent.chief_reminded == false
+         UserMailer.reminder_chief.deliver
+         pcomponent.chief_reminded = true
+         pcomponent.save
+        elsif pcomponent.reminded == false
+           UserMailer.reminder.deliver
+           pcomponent.reminded = true
+           pcomponent.save
+        end
+      elsif pcomponent.project.due_date + 1.day >= Date.today
+        if pcomponent.reminded == false
+          UserMailer.reminder.deliver
+          pcomponent.reminded = true
+          pcomponent.save
+        end
+      end
+   end
 
 end
