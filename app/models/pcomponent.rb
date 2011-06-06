@@ -66,12 +66,14 @@ class Pcomponent < ActiveRecord::Base
   def get_sugestions
     sugestions = Array.new
     self.project.pquestions.joins(:question).where(:questions =>{:component_id => self.component_id}).each do |q|
-       qrate = 0.0
-       q.rates.each do |r|
-         qrate += r.stars
-       end
-       if q.question.sugestion != nil && qrate < 3
-          sugestions << q.question.sugestion
+       if !q.rates.empty?
+         qrate = 0.0
+         q.rates.each do |r|
+           qrate += r.stars
+         end
+         if q.question.sugestion != nil && qrate < 3
+            sugestions << q.question.sugestion
+         end
        end
     end
     return sugestions
