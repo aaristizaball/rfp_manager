@@ -67,7 +67,8 @@ ActiveRecord::Schema.define(:version => 20110531201640) do
   create_table "projects", :force => true do |t|
     t.string   "title"
     t.date     "due_date"
-    t.string   "state"
+    t.boolean  "requirements_finished"
+    t.boolean  "questions_finished"
     t.float    "score"
     t.datetime "created_at"
     t.datetime "updated_at"

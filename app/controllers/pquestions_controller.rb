@@ -60,6 +60,7 @@ class PquestionsController < ApplicationController
       pc[0].questions_finished = true
       pc[0].questions_score = (questions_score/cont)
       pc[0].save
+      @pquestion.project.did_finish
     end
       
     render :update do |page|
