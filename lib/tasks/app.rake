@@ -35,6 +35,7 @@ namespace :app do
        {:title => 'Pregunta 2?', :component_id => 1, :impact_id => 2, :sugestion_id => 2},
        {:title => 'Pregunta 3?', :component_id => 2, :impact_id => 3, :sugestion_id => 3},
        {:title => 'Pregunta 4?', :component_id => 2, :impact_id => 2, :sugestion_id => 4},
+       {:title => 'Pregunta 5?', :component_id => 3, :impact_id => 2, :sugestion_id => 4},
      ].each do |attributes|
        Question.find_or_create_by_title(attributes)
     end
@@ -44,6 +45,7 @@ namespace :app do
        {:title => 'Requerimiento 2', :component_id => 1},
        {:title => 'Requerimiento 3', :component_id => 2},
        {:title => 'Requerimiento 4', :component_id => 2},
+       {:title => 'Requerimiento 5', :component_id => 3},
      ].each do |attributes|
        Requirement.find_or_create_by_title(attributes)
     end

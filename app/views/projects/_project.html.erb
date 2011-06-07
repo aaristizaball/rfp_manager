@@ -1,4 +1,6 @@
 <div class="field">
 	<%= project_title_links(project)%>
+	<div class="project-state"><% if !project.state.nil? %> <%= project.state %> <%end%></div>
+	<div class="project-score"><% if !project.score.nil? %> <%=  "%.2f"%(project.score.to_s) %><%end%></div>
 	<%= render project.pcomponents %>
 </div>

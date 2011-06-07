@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20110531201640) do
     t.date     "due_date"
     t.boolean  "requirements_finished"
     t.boolean  "questions_finished"
+    t.string   "state"
     t.float    "score"
     t.datetime "created_at"
     t.datetime "updated_at"

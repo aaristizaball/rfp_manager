@@ -5,6 +5,7 @@ class CreateProjects < ActiveRecord::Migration
       t.date :due_date
       t.boolean :requirements_finished
       t.boolean :questions_finished
+      t.string :state
       t.float :score
 
       t.timestamps

@@ -16,7 +16,7 @@ class Project < ActiveRecord::Base
     
       self.pcomponents.each do |pc|
         if pc.questions_finished
-           components_finished++
+           components_finished =  components_finished + 1
            score += pc.questions_score
         end
         if !pc.requirements_aproved
@@ -24,14 +24,16 @@ class Project < ActiveRecord::Base
         end
       end
       if pcomponents.count == components_finished
-        score /= components
+        score /= components_finished
         if requirement_aproved && score >= 3.0
           self.state = 'Aproved'
         else
           self.state = 'Unaproved'
         end
+        self.score = score
       else
         self.state = 'In process'
       end
+      self.save
   end
 end
