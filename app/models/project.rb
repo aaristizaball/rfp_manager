@@ -4,6 +4,9 @@ class Project < ActiveRecord::Base
   has_many :pquestions, :dependent => :destroy
   has_many :prequirements, :dependent => :destroy
   
+  validates :title, :presence =>true
+  validates :due_date, :presence =>true
+  
 
   cattr_reader :per_page
   @@per_page =  2

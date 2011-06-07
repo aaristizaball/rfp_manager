@@ -4,6 +4,10 @@ class User < ActiveRecord::Base
   
   attr_accessible :name, :password, :email
   
+  validates :name, :presence =>true
+  validates :email, :presence =>true
+  validates :password, :presence =>true
+  
   def self.authenticate (submitted_name, submitted_passwd)
     auth_user = User.find_by_name(submitted_name)
     return nil if auth_user.nil?
