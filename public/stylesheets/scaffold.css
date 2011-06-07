@@ -6,7 +6,7 @@ pre {
 }
 
 a { color: #ccc; }
-a:visited { color: #666; }
+a:visited { color: #cccdce; }
 a:hover { color: #fff; }
 
 div.field, div.actions {

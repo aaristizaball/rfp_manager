@@ -1,4 +1,5 @@
 
+
 nav {
   float: right;
 }
@@ -37,7 +38,6 @@ body {
   width: 600px;
   margin: 20px auto;
   background-color: #333; 
-  color: #333;
 }
 
 body, p, ol, ul, td {
@@ -96,6 +96,7 @@ label {
 .field .pcomponent {
   position: relative;
   border-bottom: 1px solid #666;
+	padding-bottom:30px;
 }
 .field .pcomponent.first {
   border-top: 1px solid #666;
@@ -122,7 +123,7 @@ label {
   letter-spacing: 1px;
   position: absolute;
   right: 60px;
-  bottom: 2px;
+  bottom: 5px;
 }
 .field .pcomponent .status-title.status_1 { color: #669; }
 .field .pcomponent .status-title.status_2 { color: #966; }
@@ -212,19 +213,85 @@ p {
 
 p.addlink {
   text-align: right;
+	color:#000000;
 }
+
+td{
+	text-align:center;
+}
+
+ol{
+	font-weight: bold;	
+}
+
+ul{
+	font-weight: normal;	
+}
+
 
 #alert {
   color: red;
 }
 
 div.menu{
-  position: absolute;
-  left: 60px;
-  top: 40px;
+	
+  	position: absolute;
+  	left: 60px;
+  	top: 30px;
+	
+
 }
 
+
 div.menu .menu-item{
-  background-color:  #09c; 
-  color:#FFFFFF; 
+	text-align:center;
+	padding-right: 6px;
+	padding-left: 6px;	
+	padding-bottom: 4px;
+	margin: 9px;	
+	-webkit-border-radius: 10px;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#546b7e), to(rgba(0,0,0,0.15)));
+	background-repeat:no-repeat;
+	background-image:-moz-linear-gradient(0% 270deg, #546b7e, rgba(0,0,0,0.15));
+	border:1px #000000 solid;
+	text-decoration: none;
+}
+
+
+
+
+div.comments h5{
+	text-align:center;
+	padding:0;
+	margin:0;
+	background-color:  #6a7888;
+}
+
+
+div.comments{	
+	border:#57595b 1px solid;
+}
+
+ul.requirements-comment{
+	border:0px;
+	margin:0;
+}
+
+
+#project_due_date_input li{	
+	height:30px;
+	width:33.333%;
+	padding:0;
+	margin:0;
+	text-align:center;
+	
+}
+
+#notice{
+	background-color:  rgba(0,0,0,0.15);
+	padding:10px;
+}
+
+table{
+	width:80%;
 }
