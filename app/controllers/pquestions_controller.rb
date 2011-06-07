@@ -52,7 +52,7 @@ class PquestionsController < ApplicationController
     end
     
     prs.each do |pr|
-      if (!pr.state.nil? && pr.state == 1)
+      if (!pr.state.nil?)
         countPRS = countPRS + 1
       end
     end
