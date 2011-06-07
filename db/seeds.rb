@@ -23,9 +23,9 @@
   end
 
 [
-  {:title => 'Financial'}#,
-  #{:title => 'Technical'},
-  #{:title => 'Law'}
+  {:title => 'Financial'},
+  {:title => 'Technical'},
+  {:title => 'Law'}
 ].each do |attributes|
   Component.find_or_create_by_title(attributes)
 end

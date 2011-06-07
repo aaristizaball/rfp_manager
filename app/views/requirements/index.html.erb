@@ -11,7 +11,7 @@
 <% @requirements.each do |requirement| %>
   <tr>
     <td><%= requirement.title %></td>
-    <td><%= requirement.component.humanize %></td>
+    <td><%= requirement.component.title %></td>
     <td><%= link_to 'Edit', edit_requirement_path(requirement) %></td>
     <td><%= link_to 'Destroy', requirement, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
