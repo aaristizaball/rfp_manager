@@ -3,5 +3,8 @@
     <%= form.input :user %>
   <% end %>
 
-  <%= form.buttons %>
+    <%= form.buttons do %>
+      <%= form.commit_button "Submit" %>
+   <% end %>
+
 <% end %>

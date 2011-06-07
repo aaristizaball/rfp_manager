@@ -3,6 +3,9 @@
     		<%= form.input :title %>
 			<%= form.input :due_date %>
   	  <% end %>
-	<%= form.buttons %>
+	  <%= form.buttons do %>
+      <%= form.commit_button "Submit" %>
+   <% end %>
+
 <% end %>
 

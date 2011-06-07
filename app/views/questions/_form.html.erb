@@ -5,6 +5,9 @@
 			<%= form.input :impact %>
 			<%= form.input :sugestion %>
   	  <% end %>
-	<%= form.buttons %>
+	  <%= form.buttons do %>
+      <%= form.commit_button "Submit" %>
+   <% end %>
+
 <% end %>
 
