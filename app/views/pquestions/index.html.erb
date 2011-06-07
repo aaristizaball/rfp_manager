@@ -5,6 +5,7 @@
 	<%= will_paginate @questions %>
 
 	<div class"addlink">
-	<%= link_to 'Back', projects_path(:project_id =>  params[:project_id], :page => params[:page_num]) %>
+	<%= link_to 'Back', project_path(params[:project_id]) %>
+	
 	</div>
 </div>

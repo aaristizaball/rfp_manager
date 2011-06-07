@@ -87,7 +87,7 @@ module PcomponentsHelper
               pcomponent.save
              end
           end
-        elsif pcomponent.project.due_date + 1.day >= Date.today
+        elsif pcomponent.project.due_date + 1.day == Date.today
           if pcomponent.reminded == false
             if(pcomponent.user != nil)
                UserMailer.reminder(pcomponent.user).deliver
