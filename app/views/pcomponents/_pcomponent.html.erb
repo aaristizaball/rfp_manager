@@ -7,7 +7,7 @@
 		<%else%>
 		  <%= pcomponent.component.title %>
 			<% if current_user == pcomponent.user%>
-				  <%if pcomponent.requirements_finished == false %>
+				  <% if pcomponent.requirements_finished == false %>
 						<%= link_to_icon('prequirements',  prequirements_path(:project_id => pcomponent.project_id, :component_id => pcomponent.component.id, :page_num => params[:page])) %>
 					<% elsif  pcomponent.questions_finished == false  %>						
 						<%= link_to_icon('pquestions',  pquestions_path(:project_id => pcomponent.project_id, :component_id => pcomponent.component.id, :page_num => params[:page])) %>

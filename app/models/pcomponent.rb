@@ -29,14 +29,15 @@ class Pcomponent < ActiveRecord::Base
      self.project.pquestions.joins(:question).where(:questions =>{:component_id => self.component_id}).each do |q|
        impact = q.question.impact.value
        qrate = 0.0
-       q.rates.each do |r|
-         qrate += r.stars
+       if !q.rates.empty?
+         qrate = q.rates[0].stars
+         total += qrate * impact
+         cont += impact
        end
-       total += qrate * impact
-       cont += impact
+       
      end
      if cont == 0
-       score = 0.0
+       score = '--'
      else
        score = total/cont
      end

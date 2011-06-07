@@ -22,7 +22,6 @@
     Impact.find_or_create_by_title(attributes)
   end
 
-
 [
   {:title => 'Financial'},
   {:title => 'Technical'},
