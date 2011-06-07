@@ -94,9 +94,10 @@ label {
 .field .prequirement,
 .field .pquestion,
 .field .pcomponent {
-  position: relative;
-  border-bottom: 1px solid #666;
+  	position: relative;
+  	border-bottom: 1px solid #666;
 	padding-bottom:30px;
+
 }
 .field .pcomponent.first {
   border-top: 1px solid #666;
@@ -235,7 +236,7 @@ ul{
 
 div.menu{
 	
-  	position: absolute;
+  	position: fixed;
   	left: 60px;
   	top: 30px;
 	
@@ -294,4 +295,18 @@ ul.requirements-comment{
 
 table{
 	width:80%;
+}
+
+.project-state{
+	text-align: right;
+	position:relative;
+/*	top: -46px;*/
+	
+}
+
+.project-score{
+	text-align: center;
+	position:relative;
+	top: -23px;
+	
 }
