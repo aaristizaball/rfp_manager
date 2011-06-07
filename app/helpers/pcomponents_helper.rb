@@ -14,7 +14,6 @@ module PcomponentsHelper
       
      if type == '2'
          content_tag :div, :class => "comments" do
-           
              [ (
                comments = pcomponent.get_requirements_comments
                if !comments.empty?
