@@ -6,7 +6,7 @@ class Pquestion < ActiveRecord::Base
   
   ajaxful_rateable :stars => 5, :dimensions => [:calification], :allow_update => true
   cattr_reader :per_page
-  @@per_page = 2
+  @@per_page = 5
   
   def metodo
     true

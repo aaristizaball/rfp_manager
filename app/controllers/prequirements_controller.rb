@@ -30,8 +30,8 @@ class PrequirementsController < ApplicationController
     prs.each do |pr|
       if (!pr.state.nil?)
         countPRS = countPRS + 1
-         if @prequirement.state == 0
-           requirements_aproved == false
+         if pr.state == 0
+           requirements_aproved = false
          end
       end
     end

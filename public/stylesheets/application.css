@@ -103,8 +103,6 @@ label {
   border-top: 1px solid #666;
 }
 
-.field .prequirement .prequirement-title,
-.field .pquestion .pquestion-title,
 .field .pcomponent .pcomponent-title {
   font-weight: bold;
   font-size: 24px;
@@ -112,6 +110,17 @@ label {
   padding: 6px 0 4px 6px;
   color: #ccc;
 }
+
+.field .prequirement .prequirement-title,
+.field .pquestion .pquestion-title{
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  padding: 6px 0 4px 6px;
+  color: #ccc;
+  width: 500px;
+}
+
 .field .pcomponent .user-name {
   display: block;
   color: #999;
