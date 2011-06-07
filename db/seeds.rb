@@ -23,10 +23,60 @@
   end
 
 [
-  {:title => 'Financial'},
   {:title => 'Technical'},
-  {:title => 'Law'}
+  {:title => 'Financial'},
+  {:title => 'Security'},
+  {:title => 'Legal'}, 
+  {:title => 'Time'},
+  {:title => 'Methodology'}
 ].each do |attributes|
   Component.find_or_create_by_title(attributes)
+end
+
+[
+  {:title => 'Nivel de conocimientos internos?', :component_id => 1, :impact_id => 3},
+  {:title => 'Que experiencia tiene en el negocio', :component_id => 1, :impact_id => 3},
+  {:title => 'Nivel de herramientas disponible?', :component_id => 1, :impact_id => 3},
+  
+  {:title => 'Margen de utilidad de la migracion? ', :component_id => 2, :impact_id => 3},
+  {:title => 'Capital para la migracion? ', :component_id => 2, :impact_id => 2},
+  
+  {:title => 'Que nivel de confidencialidad podemos proporcionar?', :component_id => 3, :impact_id => 2},
+  
+  {:title => 'Nivel de formalidad del contrato?', :component_id => 4, :impact_id => 2},
+  {:title => 'Supuestos definidos y claros?', :component_id => 4, :impact_id => 2},
+  {:title => 'Reglas del cliente acorde a la filosofia de la empresa?', :component_id => 4, :impact_id => 1},
+  
+  {:title => 'Probabilidad de cumplir con las fechas de entrega?', :component_id => 5 , :impact_id => 2},
+  {:title => 'Tiempos de soporte adecuados?', :component_id => 5, :impact_id => 2},  
+  
+  {:title => 'Nivel de madurez de la metodoligia en el equipo de trabajo?', :component_id => 6, :impact_id => 2},
+  {:title => 'Que tan reconocida es la metodologia utilizada en el medio', :component_id => 6, :impact_id => 1}
+  
+].each do |att|
+  Question.find_or_create_by_title(att)
+end
+
+[
+  {:title => 'Cumple con los conocimientos tecnicos exigidos?', :component_id => 1},
+  {:title => 'Cuenta con el equipo de trabajo requerido?', :component_id => 1},
+  
+  {:title => 'Nivel de conocimientos internos?', :component_id => 2},
+  {:title => 'Nivel de conocimientos internos?', :component_id => 2},
+  
+  {:title => 'Nivel de conocimientos internos?', :component_id => 3},
+  {:title => 'Nivel de conocimientos internos?', :component_id => 3},
+  
+  {:title => 'Nivel de conocimientos internos?', :component_id => 4},
+  {:title => 'Nivel de conocimientos internos?', :component_id => 4},
+  
+  {:title => 'Nivel de conocimientos internos?', :component_id => 5},
+  {:title => 'Nivel de conocimientos internos?', :component_id => 5},
+  
+  {:title => 'Nivel de conocimientos internos?', :component_id => 6},
+  {:title => 'Nivel de conocimientos internos?', :component_id => 6},
+  
+].each do |att|
+  Requirement.find_or_create_by_title(att);
 end
 

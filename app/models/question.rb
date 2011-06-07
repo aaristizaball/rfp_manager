@@ -8,5 +8,5 @@ class Question < ActiveRecord::Base
   validates :title, :presence =>true
   validates :component_id, :presence =>true
   validates :impact_id, :presence =>true
-  validates :sugestion_id, :presence =>true
+  #validates :sugestion_id, :presence =>true
 end
