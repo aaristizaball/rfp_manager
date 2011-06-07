@@ -3,6 +3,9 @@ class CreateProjects < ActiveRecord::Migration
     create_table :projects do |t|
       t.string :title
       t.date :due_date
+      t.boolean :requirements_finished
+      t.boolean :questions_finished
+      t.float :score
 
       t.timestamps
     end
