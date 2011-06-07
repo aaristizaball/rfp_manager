@@ -19,20 +19,12 @@ class PrequirementsController < ApplicationController
     @prequirement = Prequirement.find(params[:id])
 
     update_was_successful = @prequirement.update_attributes(params[:prequirement])
+    project = @prequirement.project
 
 
-    pqs = @prequirement.project.pquestions.joins(:question).where(:questions =>{:component_id => @prequirement.requirement.component_id})
-    prs = @prequirement.project.prequirements.joins(:requirement).where(:requirements =>{:component_id => @prequirement.requirement.component_id})
+    prs = project.prequirements.joins(:requirement).where(:requirements =>{:component_id => @prequirement.requirement.component_id})
     
-    
-    countPQS = 0
     countPRS = 0
-    
-    pqs.each do |pq|
-      if (pq.rates.count > 0)
-        countPQS = countPQS + 1
-      end
-    end
     
     prs.each do |pr|
       if (!pr.state.nil?)
@@ -40,11 +32,11 @@ class PrequirementsController < ApplicationController
       end
     end
     
-    
-    if (countPRS == pqs.count && countPRS == prs.count)
-      pc = @prequirement.project.pcomponents.where(:component_id => @prequirement.requirement.component_id)
-      pc[0].status_id = 4
-      pc[0].save    
+    if (countPRS == prs.count)
+      pc = project.pcomponents.where(:component_id => @prequirement.requirement.component_id)
+      pc[0].status_id = pc[0].status_id + 1
+      pc[0].requirements_finished = true
+      pc[0].save
     end
 
     respond_with @prequirement do |format|

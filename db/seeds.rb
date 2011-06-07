@@ -7,9 +7,10 @@
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
 [{:title => 'Unassigned', :position => 1},
-  {:title => 'In process', :position => 2},
-  {:title => 'Overdue', :position => 3},
-  {:title => 'Completed', :position => 4}
+  {:title => 'In Requirements', :position => 2},
+  {:title => 'In Questions', :position => 3},
+  {:title => 'Completed', :position => 4},
+  {:title => 'Overdue', :position => 5}
   ].each do |attributes|
     Status.find_or_create_by_title(attributes)
   end

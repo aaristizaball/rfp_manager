@@ -39,11 +39,9 @@ class PquestionsController < ApplicationController
     @pquestion.rate(params[:stars], @pquestion, params[:dimension])
     
     pqs = @pquestion.project.pquestions.joins(:question).where(:questions =>{:component_id => @pquestion.question.component_id})
-    prs = @pquestion.project.prequirements.joins(:requirement).where(:requirements =>{:component_id => @pquestion.question.component_id})
-    
+ 
     
     countPQS = 0
-    countPRS = 0
     
     pqs.each do |pq|
       if (pq.rates.count > 0)
@@ -51,17 +49,11 @@ class PquestionsController < ApplicationController
       end
     end
     
-    prs.each do |pr|
-      if (!pr.state.nil?)
-        countPRS = countPRS + 1
-      end
-    end
-    
-    
-    if (countPRS == pqs.count && countPRS == prs.count)
+    if (countPQS == pqs.count)
       pc = @pquestion.project.pcomponents.where(:component_id => @pquestion.question.component_id)
-      pc[0].status_id = 4
-      pc[0].save    
+      pc[0].status_id = pc[0].status_id + 1
+      pc[0].questions_finished = true
+      pc[0].save
     end
       
     render :update do |page|

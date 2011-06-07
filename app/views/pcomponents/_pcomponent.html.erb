@@ -5,12 +5,13 @@
 		<% if pcomponent.user.nil? %>
 			<%= link_to pcomponent.component.title, edit_pcomponent_path(pcomponent) %>
 		<%else%>
+		  <%= pcomponent.component.title %>
 			<% if current_user == pcomponent.user%>
-				<%= pcomponent.component.title %>
-						<%= link_to_icon('prequirements',  pquestions_path(:project_id => pcomponent.project_id, :component_id => pcomponent.component.id, :page_num => params[:page])) %>
-						<%= link_to_icon('pquestions',  prequirements_path(:project_id => pcomponent.project_id, :component_id => pcomponent.component.id, :page_num => params[:page])) %>
-			<% else %>
-				<%= pcomponent.component.title %>
+				  <%if pcomponent.requirements_finished == false %>
+						<%= link_to_icon('prequirements',  prequirements_path(:project_id => pcomponent.project_id, :component_id => pcomponent.component.id, :page_num => params[:page])) %>
+					<% elsif  pcomponent.questions_finished == false  %>						
+						<%= link_to_icon('pquestions',  pquestions_path(:project_id => pcomponent.project_id, :component_id => pcomponent.component.id, :page_num => params[:page])) %>
+					<% end %>
 			<% end %>
 		<%end%>
 	</div>
