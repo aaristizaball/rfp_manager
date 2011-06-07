@@ -7,4 +7,11 @@ class Project < ActiveRecord::Base
 
   cattr_reader :per_page
   @@per_page =  2
+  
+  
+  def is_finish
+      self.pcomponents.each do |pc|
+        
+      end
+  end
 end

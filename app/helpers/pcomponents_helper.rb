@@ -1,14 +1,22 @@
 module PcomponentsHelper
   
-   def get_scores(type, pcomponent)
-
+  def get_requirements_aproved(type, pcomponent)
       if type == '2'
-        [
-          content_tag(:div, 'Requiriment: '+pcomponent.get_requirements_score , :class => 'requirement-score'),
-          content_tag(:div, 'Score: '+ pcomponent.get_questions_score.to_s, :class => 'question-score')
-        ].join(' ').html_safe
+          if !pcomponent.requirements_aproved.nil?
+           content_tag(:div, 'Requiriment: '+pcomponent.requirements_aproved.to_s, :class => 'requirement-score')
+          end
       end
    end
+  
+   def get_questions_score(type, pcomponent)
+      if type == '2'
+          if !pcomponent.questions_score.nil?
+            content_tag(:div, 'Score: '+ "%.2f"%(pcomponent.questions_score.to_s), :class => 'question-score')
+          end
+      end
+   end
+   
+    
    
    def get_comments(type, pcomponent)
       

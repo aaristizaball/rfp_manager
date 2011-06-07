@@ -42,10 +42,15 @@ class PquestionsController < ApplicationController
  
     
     countPQS = 0
+    questions_score = 0.0
+    cont = 0
     
     pqs.each do |pq|
       if (pq.rates.count > 0)
         countPQS = countPQS + 1
+        impact = pq.question.impact.value
+        questions_score += pq.rates[0].stars * impact
+        cont += impact
       end
     end
     
@@ -53,6 +58,7 @@ class PquestionsController < ApplicationController
       pc = @pquestion.project.pcomponents.where(:component_id => @pquestion.question.component_id)
       pc[0].status_id = pc[0].status_id + 1
       pc[0].questions_finished = true
+      pc[0].questions_score = (questions_score/cont)
       pc[0].save
     end
       

@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(:version => 20110531201640) do
     t.integer  "status_id",             :default => 1
     t.boolean  "requirements_finished", :default => false
     t.boolean  "questions_finished",    :default => false
+    t.float    "questions_score"
+    t.boolean  "requirements_aproved"
     t.boolean  "reminded",              :default => false
     t.boolean  "chief_reminded",        :default => false
     t.datetime "created_at"
@@ -65,8 +67,7 @@ ActiveRecord::Schema.define(:version => 20110531201640) do
   create_table "projects", :force => true do |t|
     t.string   "title"
     t.date     "due_date"
-    t.boolean  "requirements_finished"
-    t.boolean  "questions_finished"
+    t.string   "state"
     t.float    "score"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -7,6 +7,8 @@ class CreatePcomponents < ActiveRecord::Migration
       t.integer :status_id, :default => 1
       t.boolean :requirements_finished, :default => false
       t.boolean :questions_finished, :default => false
+      t.float :questions_score
+      t.boolean :requirements_aproved
       t.boolean :reminded, :default => false
       t.boolean :chief_reminded, :default => false
 

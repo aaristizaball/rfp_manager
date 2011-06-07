@@ -25,10 +25,14 @@ class PrequirementsController < ApplicationController
     prs = project.prequirements.joins(:requirement).where(:requirements =>{:component_id => @prequirement.requirement.component_id})
     
     countPRS = 0
+    requirements_aproved = true
     
     prs.each do |pr|
       if (!pr.state.nil?)
         countPRS = countPRS + 1
+         if @prequirement.state == 0
+           requirements_aproved == false
+         end
       end
     end
     
@@ -36,6 +40,7 @@ class PrequirementsController < ApplicationController
       pc = project.pcomponents.where(:component_id => @prequirement.requirement.component_id)
       pc[0].status_id = pc[0].status_id + 1
       pc[0].requirements_finished = true
+      pc[0].requirements_aproved = requirements_aproved
       pc[0].save
     end
 
