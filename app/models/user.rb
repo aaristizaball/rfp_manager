@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   
   #has_many :project_component
   
-  attr_accessible :name, :password
+  attr_accessible :name, :password, :email
   
   def self.authenticate (submitted_name, submitted_passwd)
     auth_user = User.find_by_name(submitted_name)

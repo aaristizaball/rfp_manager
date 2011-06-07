@@ -13,10 +13,10 @@ namespace :app do
   desc "Populate de database with development data"
   task :populate => :environment do
     [
-       {:name => 'alejandro', :password => 'alejandro', :email =>  'aaristizaball@gmail.com'},
-       {:name => 'ernesto', :password => 'ernesto'},
-       {:name => 'manager', :password => 'manager'},
-       {:name => 'developer', :password => 'developer'}
+       {:email =>'aaristizaball@gmail.com', :name => 'alejandro', :password => 'alejandro'},
+       {:name => 'ernesto', :password => 'ernesto', :email =>'ecarrion@gmail.com'},
+       {:name => 'manager', :password => 'manager', :email =>'aaristizaball@gmail.com'},
+       {:name => 'developer', :password => 'developer', :email =>'ecarrion@gmail.com'}
      ].each do |attributes|
        User.find_or_create_by_name(attributes)
     end

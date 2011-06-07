@@ -1,25 +1,7 @@
-<%= form_for(@requirement) do |f| %>
-  <% if @requirement.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@requirement.errors.count, "error") %> prohibited this requirement from being saved:</h2>
-
-      <ul>
-      <% @requirement.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :component_id %><br />
-    <%= f.collection_select :component_id, Component.all, :id, :humanize %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= semantic_form_for(@requirement) do |form| %>
+	  <%= form.inputs "" do %>
+    		<%= form.input :title %>
+			<%= form.input :component %>
+  	  <% end %>
+	<%= form.buttons %>
 <% end %>
