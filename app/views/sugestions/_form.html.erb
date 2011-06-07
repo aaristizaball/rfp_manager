@@ -1,25 +1,7 @@
-<%= form_for(@sugestion) do |f| %>
-  <% if @sugestion.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@sugestion.errors.count, "error") %> prohibited this sugestion from being saved:</h2>
-
-      <ul>
-      <% @sugestion.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :component_id %><br />
-    <%= f.text_field :component_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= semantic_form_for(@sugestion) do |form| %>
+	  <%= form.inputs "" do %>
+    		<%= form.input :title %>
+			<%= form.input :component %>
+  	  <% end %>
+	<%= form.buttons %>
 <% end %>

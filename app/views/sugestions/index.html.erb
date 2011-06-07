@@ -12,8 +12,7 @@
 <% @sugestions.each do |sugestion| %>
   <tr>
     <td><%= sugestion.title %></td>
-    <td><%= sugestion.component_id %></td>
-    <td><%= link_to 'Show', sugestion %></td>
+    <td><%= sugestion.component.title %></td>
     <td><%= link_to 'Edit', edit_sugestion_path(sugestion) %></td>
     <td><%= link_to 'Destroy', sugestion, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
@@ -22,4 +21,4 @@
 
 <br />
 
-<%= link_to 'New Sugestion', new_sugestion_path %>
+<p class="addlink"><%= link_to 'New Sugestion', new_sugestion_path %></p>

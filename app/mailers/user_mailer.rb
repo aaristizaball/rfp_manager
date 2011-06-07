@@ -1,13 +1,13 @@
 class UserMailer < ActionMailer::Base
   default :from => "rfp@business.com"
   
-  def reminder_chief
-    mail(:to => 'aaristizaball@gmail.com',
+  def reminder_chief(user)
+    mail(:to => user.email,
          :subject => "RFP - Chief reminder")
   end
   
-  def reminder
-    mail(:to => 'aaristizaball@gmail.com',
+  def reminder(user)
+    mail(:to => user.email,
          :subject => "RFP - Reminder")
   end
 end
