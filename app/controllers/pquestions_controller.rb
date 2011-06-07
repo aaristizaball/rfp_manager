@@ -16,12 +16,14 @@ class PquestionsController < ApplicationController
   end
   
    def update
+     
     @pquestion = Pquestion.find(params[:id])
 
     update_was_successful = @pquestion.update_attributes(params[:pquestion])
-
+        
     respond_with @pquestion do |format|
       format.html {
+      
         if update_was_successful
           redirect_to(pquestions_path(:project_id =>@pquestion.project, :component_id => @pquestion.question.component), :notice => 'The update was succesfull')
         else
@@ -32,12 +34,40 @@ class PquestionsController < ApplicationController
   end
   
   def rate
-      @pquestion = Pquestion.find(params[:id])
-      @pquestion.rate(params[:stars], @pquestion, params[:dimension])
-      render :update do |page|
-        page.replace_html @pquestion.wrapper_dom_id(params), ratings_for(@pquestion, params.merge(:wrap => true))
-        page.visual_effect :highlight, @pquestion.wrapper_dom_id(params)
+    
+    @pquestion = Pquestion.find(params[:id])
+    @pquestion.rate(params[:stars], @pquestion, params[:dimension])
+    
+    pqs = @pquestion.project.pquestions.joins(:question).where(:questions =>{:component_id => @pquestion.question.component_id})
+    prs = @pquestion.project.prequirements.joins(:requirement).where(:requirements =>{:component_id => @pquestion.question.component_id})
+    
+    
+    countPQS = 0
+    countPRS = 0
+    
+    pqs.each do |pq|
+      if (pq.rates.count > 0)
+        countPQS = countPQS + 1
       end
+    end
+    
+    prs.each do |pr|
+      if (!pr.state.nil? && pr.state == 1)
+        countPRS = countPRS + 1
+      end
+    end
+    
+    
+    if (countPRS == pqs.count && countPRS == prs.count)
+      pc = @pquestion.project.pcomponents.where(:component_id => @pquestion.question.component_id)
+      pc[0].status_id = 4
+      pc[0].save    
+    end
+      
+    render :update do |page|
+      page.replace_html @pquestion.wrapper_dom_id(params), ratings_for(@pquestion, params.merge(:wrap => true))
+      page.visual_effect :highlight, @pquestion.wrapper_dom_id(params)
+    end
       
  end
 end
